@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/628/trunk/ravis/libRaVis/org/un/cava/birdeye/ravis/enhancedGraphLayout/visual
+END
+INodeRenderer.as
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/617/trunk/ravis/libRaVis/org/un/cava/birdeye/ravis/enhancedGraphLayout/visual/INodeRenderer.as
+END
+IControlableVisualEdge.as
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/!svn/ver/617/trunk/ravis/libRaVis/org/un/cava/birdeye/ravis/enhancedGraphLayout/visual/IControlableVisualEdge.as
+END
+EnhancedVisualNode.as
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/617/trunk/ravis/libRaVis/org/un/cava/birdeye/ravis/enhancedGraphLayout/visual/EnhancedVisualNode.as
+END
+EnhancedVisualGraph.as
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/!svn/ver/628/trunk/ravis/libRaVis/org/un/cava/birdeye/ravis/enhancedGraphLayout/visual/EnhancedVisualGraph.as
+END
+EnhancedVisualEdge.as
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/617/trunk/ravis/libRaVis/org/un/cava/birdeye/ravis/enhancedGraphLayout/visual/EnhancedVisualEdge.as
+END
+IControllableEdgeRenderer.as
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/!svn/ver/617/trunk/ravis/libRaVis/org/un/cava/birdeye/ravis/enhancedGraphLayout/visual/IControllableEdgeRenderer.as
+END
+IEnhancedVisualNode.as
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/!svn/ver/617/trunk/ravis/libRaVis/org/un/cava/birdeye/ravis/enhancedGraphLayout/visual/IEnhancedVisualNode.as
+END

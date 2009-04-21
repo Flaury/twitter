@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<mx:Application 
+	xmlns:mx="http://www.adobe.com/2006/mxml"
+	xmlns:ravis="org.un.cava.birdeye.ravis.graphLayout.visual.*"
+	xmlns:lc="org.un.cava.birdeye.ravis.components.ui.controls.layouterControls.*"
+	xmlns:vc="org.un.cava.birdeye.ravis.components.ui.controls.vgraphControls.*"
+	xmlns:ui="org.un.cava.birdeye.ravis.components.ui.*"
+	xmlns:dp="org.un.cava.birdeye.ravis.components.ui.dataPresentation.*"
+	xmlns:flexlib="http://code.google.com/p/flexlib/"
+	backgroundGradientColors="[#333333,#999999]" layout="vertical"
+	width="100%" height="100%"
+	creationPolicy="all"
+	creationComplete="init();"
+	>
+
+	<mx:Style source="styles/main.css" />
+
+	<mx:WipeLeft id="wipeLeft" duration="1000" />
+	<mx:WipeRight id="wipeRight" duration="1000" />
+	
+	
+	<mx:VBox width="100%" height="100%" horizontalAlign="center" verticalAlign="middle" >
+		
+		<mx:VBox width="1024" height="100%" verticalGap="10" >
+			<mx:ApplicationControlBar width="100%" height="85" >
+				<mx:HBox width="100%" verticalAlign="middle" paddingLeft="5" paddingRight="5" >
+					<mx:Image source="{EmbeddedIcons.ravisIcon}" />
+					<mx:Label text="Projet de Tristan, Ray et Florie" color="#FFFFFF" fontSize="16" />
+				</mx:HBox>
+			</mx:ApplicationControlBar>	
+			
+			<mx:HBox id="DivNavRB" width="100%" height="100%" paddingBottom="5" horizontalGap="5">
+				<mx:HBox id="sideBar" width="300" height="100%" horizontalGap="0" >
+					<ui:Grip id="navGrip" 
+						width="17" height="100%" horizontalAlign="center"
+						gripTip="Show/Hide Control Panel" />
+					<mx:VBox id="NavContainerRB"
+						horizontalScrollPolicy="off"
+						verticalScrollPolicy="off"
+						verticalAlign="middle"
+						horizontalAlign="center"
+						verticalGap="1"
+						horizontalGap="0"
+						width="100%"
+						height="100%"
+						hideEffect="{wipeLeft}"
+						showEffect="{wipeRight}">
+						<mx:Accordion id="leftAccordion"
+							paddingBottom="5"
+							paddingRight="5"
+							paddingTop="5"
+							paddingLeft="5"
+							horizontalScrollPolicy="off"
+							verticalScrollPolicy="off"
+							width="100%"
+							height="100%"
+							creationPolicy="all" >
+							<mx:Canvas id="visibilitycnvs"
+								label="Controls"
+								height="100%"
+								width="100%"
+								paddingBottom="5"
+								horizontalScrollPolicy="off"
+								verticalScrollPolicy="off" >
+								<mx:VBox width="100%"
+									height="100%"
+									horizontalAlign="center"
+									horizontalScrollPolicy="off"
+									verticalScrollPolicy="off">
+									<mx:Spacer height="3" />
+		
+									<flexlib:WindowShade
+										id="layoutContainer"
+										styleName="linkButtonWindowShade" 
+		  								label="Layout"
+		  								width="100%"
+		  								opened="false"
+		  								horizontalAlign="center"
+		  								paddingBottom="5"
+		  								>
+										<mx:VBox
+											width="99%"
+											horizontalAlign="center"
+											paddingLeft="5"
+											paddingRight="5"
+											paddingBottom="5"
+											paddingTop="5"
+											borderColor="#666666"
+											borderThickness="1"
+											cornerRadius="5"
+											borderStyle="solid"
+											backgroundColor="#CCCCCC"
+											backgroundAlpha=".2" >
+					
+											<lc:LayoutSelector id="myLayoutSelector" vgraph="{vgraph}" />
+											<lc:HierLayoutControls id="myHierLC" vgraph="{vgraph}" />
+											<lc:PhiDial id="myPhiDial" vgraph="{vgraph}" />
+											<lc:ToggleDamping id="myDamping" vgraph="{vgraph}" />
+											<lc:CommonLayoutControls id="myCommonLC" vgraph="{vgraph}" />
+											<dp:CenteredNodeLabel id="myCenteredNodeLabel" vgraph="{vgraph}" />
+											<dp:NoVisNodesLabel id="myNoVisNodeLabel" vgraph="{vgraph}" />
+									
+										</mx:VBox>
+									</flexlib:WindowShade>
+			
+									<!-- Node Styles -->
+									<flexlib:WindowShade
+										id="nodeRenderContainer"
+										styleName="linkButtonWindowShade" 
+						  				label="Node Styles"
+						  				width="100%"
+						  				opened="true"
+						  				horizontalAlign="center"
+						  				paddingBottom="5"
+						  				>
+				
+										<vc:NodeRendererSelector id="myNodeRendererSelector" vgraph="{vgraph}" />
+				
+									</flexlib:WindowShade>
+									
+									<!-- Edge Styles -->
+									<flexlib:WindowShade
+										id="edgeRenderContainer"
+										styleName="linkButtonWindowShade" 
+							  			label="Edge Styles"
+							  			width="100%"
+							  			opened="true"
+							  			horizontalAlign="center"
+							  			paddingBottom="5"
+							  			>
+									
+										<vc:EdgeRendererSelector id="myEdgeRendererSelector" vgraph="{vgraph}" />
+									
+									</flexlib:WindowShade>
+									
+									<!-- Edge Labels -->
+									<flexlib:WindowShade
+										id="edgeLabelRenderContainer"
+										styleName="linkButtonWindowShade" 
+							  			label="Edge Label Styles"
+							  			width="100%"
+							  			opened="true"
+							  			horizontalAlign="center"
+							  			paddingBottom="5"
+							  			>
+										<vc:EdgeLabelControls id="myELCs" vgraph="{vgraph}" />
+									</flexlib:WindowShade>
+									
+									<flexlib:WindowShade
+										id="viewControlsContainer"
+										styleName="linkButtonWindowShade" 
+							  			label="View Controls"
+							  			width="100%"
+							  			opened="true"
+							  			horizontalAlign="center"
+							  			paddingBottom="5"
+							  			>
+							  			<mx:VBox
+											width="97%"
+											horizontalAlign="center"
+											paddingLeft="5"
+											paddingRight="5"
+											paddingBottom="5"
+											paddingTop="5"
+											borderColor="#666666"
+											borderThickness="1"
+											cornerRadius="5"
+											borderStyle="solid"
+											backgroundColor="#CCCCCC"
+											backgroundAlpha=".2" >
+											<vc:DegreesOfSeparation id="myDegreeOS" vgraph="{vgraph}" />
+											<vc:ScaleControls id="mySCs" vgraph="{vgraph}" />
+											<vc:DrawButton id="myDB" vgraph="{vgraph}" />
+											<vc:FullRefreshButton
+												id="myFRB"
+												vgraph="{vgraph}"
+												directional="false"
+												xmlData="{xmldata}" />
+										</mx:VBox>
+									</flexlib:WindowShade>					
+									
+									<mx:Spacer height="5" />
+								</mx:VBox>		
+							</mx:Canvas>
+						</mx:Accordion>
+					</mx:VBox>		
+				</mx:HBox>
+		
+				<!-- Graph Panel -->
+				
+				<mx:Canvas id="graphCnvs"
+					borderStyle="solid"
+					borderColor="#CCCCCC"
+					backgroundColor="#FFFFFF"
+					width="100%"
+					height="100%"
+					verticalScrollPolicy="off">		
+				
+					<ravis:VisualGraph id="vgraph" width="100%" height="100%" 
+						paddingBottom="5" left="0" right="0" top="0" bottom="0" backgroundColor="#FFFFFF" alpha="1"
+						resize="vgraph.draw(VisualGraph.DF_RESET_LL)"
+						visibilityLimitActive="true"
+						>
+					</ravis:VisualGraph>
+				</mx:Canvas>
+				<!-- End of Graph Panel -->
+			</mx:HBox>
+		</mx:VBox>
+	</mx:VBox>
+	
+	<mx:states>
+		<mx:State name="showCntrlPanel">
+			<mx:SetProperty target="{sideBar}" name="width" value="300" />
+			<mx:SetStyle target="{DivNavRB}" name="horizontalGap" value="5" />
+		</mx:State>        
+		<mx:State name="hideCntrlPanel">
+			<mx:SetProperty target="{sideBar}" name="width" value="17" />
+			<mx:SetStyle target="{DivNavRB}" name="horizontalGap" value="0" />
+		</mx:State>
+	</mx:states>
+	<mx:transitions>
+		<mx:Transition fromState="*" toState="*">
+			<mx:Resize target="{sideBar}" />
+		</mx:Transition>
+	</mx:transitions>
+
+	<mx:XML id="xmldata" source="data/graph.xml" />
+	
+	<mx:Script>
+		<![CDATA[
+			import org.un.cava.birdeye.ravis.graphLayout.data.Graph;
+			import org.un.cava.birdeye.ravis.components.ui.controls.vgraphControls.NodeRendererSelector;
+			import org.un.cava.birdeye.ravis.components.ui.controls.vgraphControls.EdgeRendererSelector;
+			import org.un.cava.birdeye.ravis.components.ui.controls.vgraphControls.DegreesOfSeparation;
+			import org.un.cava.birdeye.ravis.assets.icons.EmbeddedIcons;
+			
+							
+			// Logging support
+			import mx.logging.Log;
+			import mx.logging.LogEventLevel;
+			import mx.logging.targets.TraceTarget;
+			
+			
+			/* Init function, initiates the HTTP
+			 * request. All further initalisation is done
+			 * in the event handler for the HTTP Service */
+			private function init():void {
+				initLogging();
+				initData();
+			}
+			
+			
+			/**
+			 * event handler for HTTPService, does all the remaining required
+			 * initialisation */
+			private function initData():void {
+				
+				/* init a graph object with the XML data */
+				vgraph.graph = new Graph("XMLAsDocsGraph",false,xmldata);
+
+				/* assign start root */
+				vgraph.currentRootVNode = vgraph.graph.nodeByStringId("1").vnode;
+	
+				/* provide the control components with some initial settings */
+				myLayoutSelector.selectedItem = "ConcentricRadial";
+				myLayoutSelector.changeLayouter();
+	
+				myNodeRendererSelector.selectedItem = "Icons";
+				myNodeRendererSelector.changeNodeRenderer();
+				
+				myEdgeRendererSelector.selectedItem = "Default";
+				myEdgeRendererSelector.changeEdgeRenderer();
+			
+				myELCs.elselector.selectedItem = "Default";
+				myELCs.elselector.changeEdgeLabelRenderer();
+				
+				myDegreeOS.updateMaxVisDist();
+				/*quéquette*/
+				/* the following kicks it off .... */
+				vgraph.draw();
+			}
+			
+			
+			private function initLogging():void {
+				const target:TraceTarget = new TraceTarget();
+				
+				/* can specify a certain subset of categories/classes to log */
+				//target.filters = ["components.*", "graphLayout.*"];
+				
+				/* can specify logging parameters */
+				target.includeDate = false;
+				target.includeTime = false;
+				target.includeCategory = false; // Category = "ravis"
+				target.includeLevel = true;
+				target.level = LogEventLevel.DEBUG;
+				Log.addTarget(target);
+			}
+		]]>
+	</mx:Script>		
+
+
+</mx:Application>

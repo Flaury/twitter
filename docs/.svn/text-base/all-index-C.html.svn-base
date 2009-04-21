@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>C Index</title>
+<link rel="stylesheet" href="style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="print.css" type="text/css" media="print">
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="asdoc.js"></script><script type="text/javascript" language="javascript" src="cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'C Index - Tweetr Documentation';
+				var baseRef = '';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">Tweetr Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('all-classes.html')" href="package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('all-classes.html')" href="class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a href="index.html?all-index-C.html&amp;index-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">C&nbsp;Index</td><td align="right" id="subNav" class="titleTableSubNav"></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("C Index"); titleBar_setSubNav(false,false,false,false,false,false,false,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<br>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td colspan="2"><a name="C"></a><a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-A.html">A</a>&nbsp;&nbsp;<a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-B.html">B</a>&nbsp;&nbsp;<font style="bold" size="10px" color="black">C</font>&nbsp;&nbsp;<a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-D.html">D</a>&nbsp;&nbsp;<a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-E.html">E</a>&nbsp;&nbsp;<a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-F.html">F</a>&nbsp;&nbsp;<a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-G.html">G</a>&nbsp;&nbsp;<a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-H.html">H</a>&nbsp;&nbsp;<a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-I.html">I</a>&nbsp;&nbsp;<a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-J.html">J</a>&nbsp;&nbsp;<a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-K.html">K</a>&nbsp;&nbsp;<a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-L.html">L</a>&nbsp;&nbsp;<a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-M.html">M</a>&nbsp;&nbsp;<a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-N.html">N</a>&nbsp;&nbsp;<a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-O.html">O</a>&nbsp;&nbsp;<a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-P.html">P</a>&nbsp;&nbsp;<a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-Q.html">Q</a>&nbsp;&nbsp;<a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-R.html">R</a>&nbsp;&nbsp;<a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-S.html">S</a>&nbsp;&nbsp;<a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-T.html">T</a>&nbsp;&nbsp;<a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-U.html">U</a>&nbsp;&nbsp;<a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-V.html">V</a>&nbsp;&nbsp;<a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-W.html">W</a>&nbsp;&nbsp;<a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-X.html">X</a>&nbsp;&nbsp;<a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-Y.html">Y</a>&nbsp;&nbsp;<a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-Z.html">Z</a>&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('com/swfjunkie/tweetr/utils/class-list.html');" href="com/swfjunkie/tweetr/utils/Base64Encoder.html#CHARSET_UTF_8">CHARSET_UTF_8</a> &mdash; Constant static property in class com.swfjunkie.tweetr.utils.<a onclick="javascript:loadClassListFrame('com/swfjunkie/tweetr/utils/class-list.html');" href="com/swfjunkie/tweetr/utils/Base64Encoder.html">Base64Encoder</a></td>
+</tr>
+<tr>
+<td width="20"></td><td></td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('com/swfjunkie/tweetr/class-list.html');" href="com/swfjunkie/tweetr/Tweetr.html#event:complete">complete</a> &mdash; Event in class com.swfjunkie.tweetr.<a onclick="javascript:loadClassListFrame('com/swfjunkie/tweetr/class-list.html');" href="com/swfjunkie/tweetr/Tweetr.html">Tweetr</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+  Dispatched when the Tweetr has Completed a Request.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('com/swfjunkie/tweetr/utils/class-list.html');" href="com/swfjunkie/tweetr/utils/URLShortener.html#event:complete">complete</a> &mdash; Event in class com.swfjunkie.tweetr.utils.<a onclick="javascript:loadClassListFrame('com/swfjunkie/tweetr/utils/class-list.html');" href="com/swfjunkie/tweetr/utils/URLShortener.html">URLShortener</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+  Dispatched when the instance has successfully shortened an url.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('com/swfjunkie/tweetr/events/class-list.html');" href="com/swfjunkie/tweetr/events/TweetEvent.html#COMPLETE">COMPLETE</a> &mdash; Constant static property in class com.swfjunkie.tweetr.events.<a onclick="javascript:loadClassListFrame('com/swfjunkie/tweetr/events/class-list.html');" href="com/swfjunkie/tweetr/events/TweetEvent.html">TweetEvent</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   <p>The event returns the following properties:</p>
+   <table class=innertable>
+   <tr><th>Property</th><th>Value</th></tr>
+   <tr><td>responseArray</td><td>Array filled with Data Objects containing the results of your request</td></tr>
+   </table>
+      </td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('com/swfjunkie/tweetr/class-list.html');" href="com/swfjunkie/tweetr/package-detail.html">com.swfjunkie.tweetr</a> &mdash; Package</td>
+</tr>
+<tr>
+<td width="20"></td><td>Twitter API Library.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('com/swfjunkie/tweetr/data/class-list.html');" href="com/swfjunkie/tweetr/data/package-detail.html">com.swfjunkie.tweetr.data</a> &mdash; Package</td>
+</tr>
+<tr>
+<td width="20"></td><td>Contains the static DataParser Class which takes care of parsing DataObject used by Tweetr.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('com/swfjunkie/tweetr/data/objects/class-list.html');" href="com/swfjunkie/tweetr/data/objects/package-detail.html">com.swfjunkie.tweetr.data.objects</a> &mdash; Package</td>
+</tr>
+<tr>
+<td width="20"></td><td>Package that contains all available DataObjects used by Tweetr.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('com/swfjunkie/tweetr/events/class-list.html');" href="com/swfjunkie/tweetr/events/package-detail.html">com.swfjunkie.tweetr.events</a> &mdash; Package</td>
+</tr>
+<tr>
+<td width="20"></td><td>Event Classes used by Tweetr.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('com/swfjunkie/tweetr/utils/class-list.html');" href="com/swfjunkie/tweetr/utils/package-detail.html">com.swfjunkie.tweetr.utils</a> &mdash; Package</td>
+</tr>
+<tr>
+<td width="20"></td><td>Util Class used by Tweetr.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('com/swfjunkie/tweetr/data/objects/class-list.html');" href="com/swfjunkie/tweetr/data/objects/DirectMessageData.html#createdAt">createdAt</a> &mdash; Property in class com.swfjunkie.tweetr.data.objects.<a onclick="javascript:loadClassListFrame('com/swfjunkie/tweetr/data/objects/class-list.html');" href="com/swfjunkie/tweetr/data/objects/DirectMessageData.html">DirectMessageData</a></td>
+</tr>
+<tr>
+<td width="20"></td><td></td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('com/swfjunkie/tweetr/data/objects/class-list.html');" href="com/swfjunkie/tweetr/data/objects/ExtendedUserData.html#createdAt">createdAt</a> &mdash; Property in class com.swfjunkie.tweetr.data.objects.<a onclick="javascript:loadClassListFrame('com/swfjunkie/tweetr/data/objects/class-list.html');" href="com/swfjunkie/tweetr/data/objects/ExtendedUserData.html">ExtendedUserData</a></td>
+</tr>
+<tr>
+<td width="20"></td><td></td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('com/swfjunkie/tweetr/data/objects/class-list.html');" href="com/swfjunkie/tweetr/data/objects/SearchResultData.html#createdAt">createdAt</a> &mdash; Property in class com.swfjunkie.tweetr.data.objects.<a onclick="javascript:loadClassListFrame('com/swfjunkie/tweetr/data/objects/class-list.html');" href="com/swfjunkie/tweetr/data/objects/SearchResultData.html">SearchResultData</a></td>
+</tr>
+<tr>
+<td width="20"></td><td></td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('com/swfjunkie/tweetr/data/objects/class-list.html');" href="com/swfjunkie/tweetr/data/objects/StatusData.html#createdAt">createdAt</a> &mdash; Property in class com.swfjunkie.tweetr.data.objects.<a onclick="javascript:loadClassListFrame('com/swfjunkie/tweetr/data/objects/class-list.html');" href="com/swfjunkie/tweetr/data/objects/StatusData.html">StatusData</a></td>
+</tr>
+<tr>
+<td width="20"></td><td></td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('com/swfjunkie/tweetr/class-list.html');" href="com/swfjunkie/tweetr/Tweetr.html#createFavorite()">createFavorite</a>(id) &mdash; Method in class com.swfjunkie.tweetr.<a onclick="javascript:loadClassListFrame('com/swfjunkie/tweetr/class-list.html');" href="com/swfjunkie/tweetr/Tweetr.html">Tweetr</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Favorites the status specified in the ID parameter as the authenticating user.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('com/swfjunkie/tweetr/class-list.html');" href="com/swfjunkie/tweetr/Tweetr.html#createFriendship()">createFriendship</a>(id, follow) &mdash; Method in class com.swfjunkie.tweetr.<a onclick="javascript:loadClassListFrame('com/swfjunkie/tweetr/class-list.html');" href="com/swfjunkie/tweetr/Tweetr.html">Tweetr</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+         Befriends the user specified in the ID parameter as the authenticating user.</td>
+</tr>
+<tr>
+<td style="padding-bottom:20px" colspan="2"></td>
+</tr>
+<tr>
+<td colspan="2"><a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-A.html">A</a>&nbsp;&nbsp;<a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-B.html">B</a>&nbsp;&nbsp;<font style="bold" size="10px" color="black">C</font>&nbsp;&nbsp;<a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-D.html">D</a>&nbsp;&nbsp;<a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-E.html">E</a>&nbsp;&nbsp;<a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-F.html">F</a>&nbsp;&nbsp;<a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-G.html">G</a>&nbsp;&nbsp;<a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-H.html">H</a>&nbsp;&nbsp;<a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-I.html">I</a>&nbsp;&nbsp;<a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-J.html">J</a>&nbsp;&nbsp;<a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-K.html">K</a>&nbsp;&nbsp;<a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-L.html">L</a>&nbsp;&nbsp;<a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-M.html">M</a>&nbsp;&nbsp;<a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-N.html">N</a>&nbsp;&nbsp;<a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-O.html">O</a>&nbsp;&nbsp;<a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-P.html">P</a>&nbsp;&nbsp;<a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-Q.html">Q</a>&nbsp;&nbsp;<a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-R.html">R</a>&nbsp;&nbsp;<a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-S.html">S</a>&nbsp;&nbsp;<a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-T.html">T</a>&nbsp;&nbsp;<a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-U.html">U</a>&nbsp;&nbsp;<a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-V.html">V</a>&nbsp;&nbsp;<a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-W.html">W</a>&nbsp;&nbsp;<a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-X.html">X</a>&nbsp;&nbsp;<a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-Y.html">Y</a>&nbsp;&nbsp;<a onclick="javascript:loadClassListFrame('index-list.html');" href="all-index-Z.html">Z</a>&nbsp;&nbsp;</td>
+</tr>
+</table>
+<p></p>
+<center class="copyright">[swfjunkie.com] - Open source under Simplified BSD</center>
+</div>
+</body>
+</html>
+<!--[swfjunkie.com] - Open source under Simplified BSD-->

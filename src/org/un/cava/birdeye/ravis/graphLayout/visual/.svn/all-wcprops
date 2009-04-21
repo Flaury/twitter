@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/617/trunk/ravis/libRaVis/org/un/cava/birdeye/ravis/graphLayout/visual
+END
+VisualGraph.as
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/617/trunk/ravis/libRaVis/org/un/cava/birdeye/ravis/graphLayout/visual/VisualGraph.as
+END
+VisualEdge.as
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/158/trunk/ravis/libRaVis/org/un/cava/birdeye/ravis/graphLayout/visual/VisualEdge.as
+END
+IVisualItem.as
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/161/trunk/ravis/libRaVis/org/un/cava/birdeye/ravis/graphLayout/visual/IVisualItem.as
+END
+IVisualNode.as
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/617/trunk/ravis/libRaVis/org/un/cava/birdeye/ravis/graphLayout/visual/IVisualNode.as
+END
+IEdgeRenderer.as
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/148/trunk/ravis/libRaVis/org/un/cava/birdeye/ravis/graphLayout/visual/IEdgeRenderer.as
+END
+IVisualEdge.as
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/158/trunk/ravis/libRaVis/org/un/cava/birdeye/ravis/graphLayout/visual/IVisualEdge.as
+END
+IVisualGraph.as
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/182/trunk/ravis/libRaVis/org/un/cava/birdeye/ravis/graphLayout/visual/IVisualGraph.as
+END
+VisualNode.as
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/617/trunk/ravis/libRaVis/org/un/cava/birdeye/ravis/graphLayout/visual/VisualNode.as
+END

@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:WindowedApplication xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute"
+	xmlns:ravis="org.un.cava.birdeye.ravis.graphLayout.visual.*"
+	xmlns:controls="org.un.cava.birdeye.ravis.components.ui.controls.vgraphControls.*" borderColor="#306999" themeColor="#367EAC" width="1447" height="694">
+
+
+<mx:Script>
+	<![CDATA[
+		import mx.collections.ArrayCollection;
+		import mx.events.TweenEvent;
+		import com.swfjunkie.tweetr.data.objects.UserData;
+		import com.swfjunkie.tweetr.data.objects.StatusData;
+		import com.swfjunkie.tweetr.events.TweetEvent;
+		import com.swfjunkie.tweetr.Tweetr;
+		import mx.controls.Alert;
+		
+		
+		import org.un.cava.birdeye.ravis.graphLayout.data.INode;
+		import org.un.cava.birdeye.ravis.graphLayout.data.IGraph;
+		import org.un.cava.birdeye.ravis.graphLayout.data.Graph;			
+		import org.un.cava.birdeye.ravis.graphLayout.visual.VisualNode;
+		import org.un.cava.birdeye.ravis.graphLayout.visual.IVisualNode;
+		import org.un.cava.birdeye.ravis.graphLayout.visual.IVisualGraph;
+		import org.un.cava.birdeye.ravis.graphLayout.visual.IEdgeRenderer;
+		import org.un.cava.birdeye.ravis.graphLayout.layout.ILayoutAlgorithm;
+		import org.un.cava.birdeye.ravis.graphLayout.layout.ConcentricRadialLayouter;
+		import org.un.cava.birdeye.ravis.graphLayout.visual.edgeRenderers.DirectedBalloonEdgeRenderer;
+		import org.un.cava.birdeye.ravis.graphLayout.visual.VisualGraph;
+		
+		// These are the item renderers
+		import renderers.nodes.mxml.eventNodeRenderer;
+		import renderers.edgelabels.mxml.shapeEdgeLabelRenderer;
+
+
+		//declarations of variables
+		public var choix:int=0;
+		public var ghost:UserData = new UserData;
+		public var mainArr:Array=new Array(ghost);
+		public var retriever:Array=new Array(1);
+		public var tweetr:Tweetr;
+		public var mutex:int=1;
+		
+		public var graphe:XML;
+		public var noeud:String='';
+		public var edge:String='';
+		
+		
+		
+		// graph datastructure object
+		private var graph:IGraph;
+		// active layouter
+		private var layouter:ILayoutAlgorithm;
+		// edge renderer
+		private var selectedEdgeRenderer:IEdgeRenderer;
+		// root node to start with
+		private var startRoot:IVisualNode;
+		// this is used to display the number of visible items
+		private var itemCount:int = 0;
+		// important to ensure we are done with the main initialisation
+		private var initDone:Boolean = false;
+
+
+
+
+		private function connect():void
+		{
+        	ghost.description="";
+        	
+        	// create a new tweetr instance
+            tweetr = new Tweetr();
+            
+            // set the browserAuth to false so we actually use
+            // the AIR authentication scheme
+            tweetr.browserAuth = false;
+                            
+            // pass the username & password
+            tweetr.username = txtUser.text;
+            tweetr.password = null;
+           
+
+            // add event listeners
+            tweetr.addEventListener(TweetEvent.COMPLETE, handleLoad);
+            tweetr.addEventListener(TweetEvent.FAILED, handleFail);
+		 
+		 	if (choix==1){
+            	// so let's retrieve the friends
+            	retrieveFriends();
+            }
+            else 
+			{
+            	// so let's retrieve the followers
+            	retrieveFollowers();
+            }
+		 
+		 }
+		 
+		 
+		 
+		private function retrieveFriends():void
+		{
+			tweetr.getFriends(txtUser.text, i);
+			
+			var i:int=0;
+			while ( retriever.length==100 )
+			{
+				if (mutex==1){
+					tweetr.getFriends(txtUser.text, i);
+					mutex=0;
+					i=i+1;
+				}
+			}		
+		}
+		
+		
+
+
+
+		private function retrieveFollowers():void
+		{
+			tweetr.getFollowers(txtUser.text, j);
+			
+			var j:int=0;
+			while( retriever.length==100)
+			{
+				trace("bouh");
+				if (mutex==1){
+					tweetr.getFollowers(txtUser.text, j);
+					mutex=0;
+					j=j+1;
+				}
+			}		
+		}
+
+
+		/**
+       	* @private
+       	* If everything goes well, we get an event with an
+       	* array full of StatusData Objects
+       	*/
+       	private function handleLoad(event:TweetEvent):void
+       	{
+       		retriever=event.responseArray;
+       		mainArr = mainArr.concat(retriever);
+       		if (retriever.length!=100)
+       		{
+       			mainArr = mainArr.sort();
+       			initGraph();
+       		}
+       		mutex=1;
+       	}
+        	        
+				
+
+
+		
+		/**
+        * @private
+        * If something go wrong, show an alert window with the info
+        */ 
+        private function handleFail(event:TweetEvent):void
+        {
+            Alert.show(event.info,"Epic Fail");
+        }
+        
+        
+        
+
+		private function initGraph():void
+		{
+       		var stName:String = txtUser.text;
+       		
+            graphe = <Graph> 
+			<Node id= "1" name ={stName} desc="It's me" nodeColor="0x4682b4" nodeSize="40" nodeClass="earth" nodeIcon="center" x="10" y="10" /> 
+ 			</Graph>;
+ 			
+ 			if (mainArr.length < 21)
+ 			{
+ 				createSimpleGraph();
+ 			}
+ 			else
+ 			{
+ 				createComplexGraph();	
+ 			}
+		}
+		
+		
+		
+		/**
+       	* @private
+       	* Creation of a graph without under node
+       	* 
+       	*/
+       	private function createSimpleGraph():void
+       	{
+       		
+			var couleur:int = 16;
+			var userData:UserData;
+			var desc:String = '';
+			
+			var lgt:int = mainArr.length;
+
+			
+			for(var i:int = 1; i < lgt; i++)
+           	{
+            	userData = mainArr[i];
+               	//var obj:Object = {};
+              
+               	//construction of the node linked to the friend 
+               	desc = userData.description;
+               	//trace(desc);
+               	desc = treatSpecialChar(desc);
+               	
+               	//trace(desc);
+
+               	noeud = 'id= "' + (i+2) + '" name ="'  + userData.name + '" desc="' + desc + '" nodeColor="0x'+ couleur.toString(16) +'" nodeSize="30" nodeClass="tree" nodeIcon="' + i + '" x="10" y="10"' 
+               	graphe = graphe.appendChild(<Node{noeud}/>);
+               
+               	/*couleur = couleur + 160000;*/  
+           	}
+          
+           for(var k:int = 1 ; k < lgt; k++)
+           {
+               userData = mainArr[k];
+             
+               //Construction of the link between the friend and the user
+               edge = 'fromID="1" toID="' + (k+2) +'" edgeLabel="Good" flow="1000" edgeClass="rain" edgeIcon="Good"';
+               graphe = graphe.appendChild(<Edge{edge}/>);  
+          }
+          
+          constGraph();
+       	}
+       	
+       	
+       	/**
+       	* @private
+       	* Creation of a graph without under node
+       	* 
+       	*/
+       	private function createComplexGraph():void
+       	{
+       		
+			var couleur:int = 16;
+			var userData:UserData;
+			var desc:String = '';
+			var nbTotNoeud:int=mainArr.length;
+			var nbSsNoeud:int=int(nbTotNoeud/20) + 1;
+			var reste:int= nbTotNoeud - int(nbTotNoeud/nbSsNoeud) * nbSsNoeud;
+
+			
+			for(var i:int = 1; i < nbSsNoeud; i++)
+           	{
+            	  
+               	noeud = 'id= "' + (i+1) + '" name ="'  + int(nbTotNoeud/nbSsNoeud) + '" desc="' + desc + '" nodeColor="0x'+ couleur.toString(16) +'" nodeSize="30" nodeClass="tree" nodeIcon="' + i + '" x="10" y="10"' 
+               	graphe = graphe.appendChild(<Node{noeud}/>);
+               
+               	/*couleur = couleur + 160000;*/  
+           	}
+               	
+            noeud = 'id= "' + (i+1) + '" name ="'  + reste + '" desc="' + desc + '" nodeColor="0x'+ couleur.toString(16) +'" nodeSize="30" nodeClass="tree" nodeIcon="' + i + '" x="10" y="10"' 
+            graphe = graphe.appendChild(<Node{noeud}/>);
+
+          
+           for(var k:int = 1 ; k < nbSsNoeud; k++)
+           {
+               userData = mainArr[k];
+             
+               //Construction of the link between the friend and the user
+               edge = 'fromID="1" toID="' + (k+2) +'" edgeLabel="Good" flow="1000" edgeClass="rain" edgeIcon="Good"';
+               graphe = graphe.appendChild(<Edge{edge}/>);  
+          }
+          
+          constGraph();
+       	}
+
+       	
+       	
+       	
+       	
+       	
+       	
+       	
+       	private function constGraph():void {
+       		
+			/* init a graph object with the XML data */  
+			graph = new org.un.cava.birdeye.ravis.graphLayout.data.Graph("XMLAsDocsGraph",false,graphe);
+			
+			/* set the graph in the VGraph object, this automatically
+			* initializes the VGraph items; 
+			* note: vgraph is the id of the mxml specified VisualGraph component */
+			vgraph.graph = graph;
+
+			/* set the default layouter type */
+			layouter = new ConcentricRadialLayouter(vgraph);
+			vgraph.layouter = layouter;
+			
+			/* set autofit */
+			layouter.autoFitEnabled = true;
+			
+			/* set the layouter */
+			vgraph.edgeRenderer = new DirectedBalloonEdgeRenderer(vgraph.edgeDrawGraphics);
+			
+			/* set the visibility limit options, default 2 
+			* a.k.a degrees of separation */
+			vgraph.maxVisibleDistance = 2;
+			
+			/* select a root node, most layouters requires a root node
+			*  Note: Id 1 is referring to node id in the XML file */
+			startRoot = graph.nodeByStringId("1").vnode;
+					
+			/* set if edge labels should be displayed */
+			vgraph.displayEdgeLabels = true;
+
+			/* the following kicks it off .... */
+			vgraph.currentRootVNode = startRoot;
+			initDone = true;
+			vgraph.draw();
+		}
+       	
+       	
+       	
+       	
+       	
+       	
+       	
+       	
+       	/**
+       	* @private
+       	* Treat the problem of special characters in person description
+       	* 
+       	*/
+		private function treatSpecialChar(str:String):String{
+			var quote:int = str.search('"');
+			var apos:int = str.search("'");
+			var lower:int = str.search("<");
+			var upper:int = str.search('>');
+			
+			while(quote != -1 || apos != -1 || lower != -1 || upper != -1 ){
+				
+				str = str.replace('"','&quot;');
+				str = str.replace("'",'&apos;');
+				str = str.replace("<",'&lt;');
+				str = str.replace(">",'&gt;');
+				
+				quote= str.search('"');
+				apos = str.search("'");
+				lower = str.search("<");
+				upper = str.search('>');
+				}
+			return str;
+		}
+			
+		
+
+
+
+	]]>
+</mx:Script>	
+
+
+	
+	
+	<mx:Style source="styles/main.css" />
+
+	<mx:Panel id="main" title="Twitter" 
+		verticalAlign="middle" horizontalAlign="center" 
+		borderColor="#3380E0" paddingBottom="5" horizontalGap="5" layout="absolute" right="1" left="1" bottom="1" top="1">
+		
+		
+		<mx:Button x="26.3" y="364.35" label="Lancer la visualisation" id="idButt" click="connect()" width="133"/>
+		<mx:TextInput x="26.3" y="56" id="txtUser" width="133"/>
+		<mx:Label x="26.3" y="30.45" text="User Name" width="163" id="userLbl"/>
+		<mx:RadioButtonGroup id="Choix"/>
+		<mx:RadioButton x="49" y="182.9" label="Followers" groupName="Choix" id="follButt" click="choix=1"/>
+		<mx:RadioButton x="49" y="212.4" label="Friends" groupName="Choix" id="friendButt" click="choix=0"/>
+		<mx:Label x="26.25" y="157.4" text="Que voulez-vous voir ?" width="144"/>
+		
+		
+
+		<mx:Canvas id="graphCnvs" borderStyle="inset" color="#000000" right="0.43945312" left="286" top="0" bottom="0">		
+			<ravis:VisualGraph id="vgraph" 
+				paddingBottom="5" left="283" right="-0.83947754" top="0" bottom="0"
+				backgroundColor="#FFFFFF" alpha="1"
+				itemRenderer="renderers.nodes.mxml.eventNodeRenderer"
+				edgeLabelRenderer="renderers.edgelabels.mxml.shapeEdgeLabelRenderer" 
+				visibilityLimitActive="true"
+				borderColor="#367FB2">
+			</ravis:VisualGraph>
+			
+			<mx:VBox x="10" y="10"  width="265" height="269">
+				<mx:Label text="Friend ID:" fontWeight="bold" />
+				<mx:Label id="nodeID" text="" />
+				<mx:Label text="Friend Name:" fontWeight="bold" />
+				<mx:Label id="nodeName" text="" />
+				<mx:Label text="Friend Desc:" fontWeight="bold" />
+				<mx:Label id="nodeDesc" text="" />
+				<mx:Label text="Friend Image:" fontWeight="bold" />
+							
+			</mx:VBox>
+		<controls:DegreesOfSeparation id="dosSlider" width="200" bottom="0" left="5" vgraph="{vgraph}" />
+		<mx:Label text="Double Click Node to Traverse Graph" bottom="0" right="5" />
+		</mx:Canvas>
+	</mx:Panel>		
+	
+
+</mx:WindowedApplication>

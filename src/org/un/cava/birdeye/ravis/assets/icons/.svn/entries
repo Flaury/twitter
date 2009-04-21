@@ -1,0 +1,74 @@
+9
+
+dir
+630
+http://birdeye.googlecode.com/svn/trunk/ravis/libRaVis/org/un/cava/birdeye/ravis/assets/icons
+http://birdeye.googlecode.com/svn
+
+
+
+2008-12-14T15:58:26.026868Z
+424
+nitin.lamba
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+0a0cd488-4f43-0410-b420-6b07f9963996
+
+EmbeddedIcons.as
+file
+
+
+
+
+2009-04-07T12:59:33.937000Z
+be536ed717820bc4994e499f19214dc7
+2008-12-14T15:58:26.026868Z
+424
+nitin.lamba
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+13202
+
+edges
+dir
+
+nodes
+dir
+
+primitives
+dir
+
+ui
+dir
+

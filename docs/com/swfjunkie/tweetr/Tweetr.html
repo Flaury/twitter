@@ -1,0 +1,1337 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../print.css" type="text/css" media="print">
+<meta content="Tweetr,com.swfjunkie.tweetr.Tweetr,RETURN_TYPE_BASIC_USER_INFO,RETURN_TYPE_BOOLEAN,RETURN_TYPE_DIRECT_MESSAGE,RETURN_TYPE_EXTENDED_USER_INFO,RETURN_TYPE_HASH,RETURN_TYPE_SEARCH_RESULTS,RETURN_TYPE_STATUS,RETURN_TYPE_TRENDS_RESULTS,browserAuth,serviceHost,version,returnType,password,username,blockUser,createFavorite,createFriendship,destroy,destroyDirectMessage,destroyFavorite,destroyFriendship,destroyTweet,followUser,getFavorites,getFollowers,getFriends,getFriendsTimeLine,getPublicTimeLine,getRateLimitStatus,getReceivedDirectMessages,getReplies,getSentDirectMessages,getSingleTweet,getUserDetails,getUserTimeLine,hasFriendship,search,sendDirectMessage,sendTweet,trends,unblockUser,unfollowUser,updateProfile" name="keywords">
+<title>com.swfjunkie.tweetr.Tweetr</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'Tweetr - Tweetr Documentation';
+				var baseRef = '../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">Tweetr Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../all-classes.html')" href="../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../all-classes.html')" href="../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../index-list.html')" href="../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../index.html?com/swfjunkie/tweetr/Tweetr.html&amp;com/swfjunkie/tweetr/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;Tweetr</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#eventSummary">Events</a>&nbsp;| <a href="#constantSummary">Constants</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class Tweetr"); titleBar_setSubNav(true,true,false,false,true,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">com.swfjunkie.tweetr</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class Tweetr</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">Tweetr <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../../images/inherit-arrow.gif"> flash.events.EventDispatcher</td>
+</tr>
+</table>
+<p></p>
+     Tweetr contains all twitter api calls that you need to create your own twitter client
+     or application that uses twitter.
+     <p></p>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#browserAuth">browserAuth</a> : Boolean = true<div class="summaryTableDescription">
+         Get/Set if Browser interal Authorization Scheme should be used.</div>
+</td><td class="summaryTableOwnerCol">Tweetr</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#password">password</a> : String<div class="summaryTableDescription">[write-only] Set the users password </div>
+</td><td class="summaryTableOwnerCol">Tweetr</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#returnType">returnType</a> : String<div class="summaryTableDescription">[read-only] Return type of the current response </div>
+</td><td class="summaryTableOwnerCol">Tweetr</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#serviceHost">serviceHost</a> : String = "twitter.com"<div class="summaryTableDescription">
+         Service Host URL you want to use without "http://".</div>
+</td><td class="summaryTableOwnerCol">Tweetr</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#username">username</a> : String<div class="summaryTableDescription">[write-only] Set the username  </div>
+</td><td class="summaryTableOwnerCol">Tweetr</td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#Tweetr()">Tweetr</a>(username:String = null, password:String = null)</div>
+<div class="summaryTableDescription">
+         Creates a new Tweetr Instance
+         </div>
+</td><td class="summaryTableOwnerCol">Tweetr</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#blockUser()">blockUser</a>(id:String):void</div>
+<div class="summaryTableDescription">
+   Blocks the user specified in the ID parameter as the authenticating user.</div>
+</td><td class="summaryTableOwnerCol">Tweetr</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#createFavorite()">createFavorite</a>(id:int):void</div>
+<div class="summaryTableDescription">
+   Favorites the status specified in the ID parameter as the authenticating user.</div>
+</td><td class="summaryTableOwnerCol">Tweetr</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#createFriendship()">createFriendship</a>(id:String, follow:Boolean = true):void</div>
+<div class="summaryTableDescription">
+         Befriends the user specified in the ID parameter as the authenticating user.</div>
+</td><td class="summaryTableOwnerCol">Tweetr</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#destroy()">destroy</a>():void</div>
+<div class="summaryTableDescription">
+         Completely destroys the instance and frees all objects for the garbage
+         collector by setting their references to null.</div>
+</td><td class="summaryTableOwnerCol">Tweetr</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#destroyDirectMessage()">destroyDirectMessage</a>(id:int):void</div>
+<div class="summaryTableDescription">
+         Destroys the direct message specified in the required ID parameter.</div>
+</td><td class="summaryTableOwnerCol">Tweetr</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#destroyFavorite()">destroyFavorite</a>(id:int):void</div>
+<div class="summaryTableDescription">
+   Un-favorites the status specified in the ID parameter as the authenticating user.</div>
+</td><td class="summaryTableOwnerCol">Tweetr</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#destroyFriendship()">destroyFriendship</a>(id:String):void</div>
+<div class="summaryTableDescription">
+         Discontinues friendship with the user specified in the ID parameter as the authenticating user.</div>
+</td><td class="summaryTableOwnerCol">Tweetr</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#destroyTweet()">destroyTweet</a>(id:int):void</div>
+<div class="summaryTableDescription">
+         Destroys the status specified by the required ID parameter.</div>
+</td><td class="summaryTableOwnerCol">Tweetr</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#followUser()">followUser</a>(id:String):void</div>
+<div class="summaryTableDescription">
+   Enables notifications for updates from the specified user to the authenticating user.</div>
+</td><td class="summaryTableOwnerCol">Tweetr</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getFavorites()">getFavorites</a>(id:String, page:int = 0):void</div>
+<div class="summaryTableDescription">
+   Returns the 20 most recent favorite statuses for the authenticating user or user specified by the ID parameter in the requested format.</div>
+</td><td class="summaryTableOwnerCol">Tweetr</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getFollowers()">getFollowers</a>(id:String = null, page:int = 0):void</div>
+<div class="summaryTableDescription">
+         Returns the authenticating user's followers, each with current status inline.</div>
+</td><td class="summaryTableOwnerCol">Tweetr</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getFriends()">getFriends</a>(id:String = null, page:int = 0):void</div>
+<div class="summaryTableDescription">
+         Returns up to 100 of the authenticating user's friends who have 
+         most recently updated, each with current status inline.</div>
+</td><td class="summaryTableOwnerCol">Tweetr</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getFriendsTimeLine()">getFriendsTimeLine</a>(since_id:String = null, since_date:String = null, count:int = 0, page:int = 0):void</div>
+<div class="summaryTableDescription">
+         Returns the 20 most recent statuses posted by the authenticating user and that user's friends.</div>
+</td><td class="summaryTableOwnerCol">Tweetr</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getPublicTimeLine()">getPublicTimeLine</a>():void</div>
+<div class="summaryTableDescription">
+         Returns the 20 most recent statuses from non-protected users who have set a custom user icon.</div>
+</td><td class="summaryTableOwnerCol">Tweetr</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getRateLimitStatus()">getRateLimitStatus</a>():void</div>
+<div class="summaryTableDescription">
+   Returns the remaining number of API requests available to the requesting user 
+   before the API limit is reached for the current hour.</div>
+</td><td class="summaryTableOwnerCol">Tweetr</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getReceivedDirectMessages()">getReceivedDirectMessages</a>(since_id:String = null, since_date:String = null, page:int = 0):void</div>
+<div class="summaryTableDescription">
+         Returns a list of the 20 most recent direct messages sent to the authenticating user.</div>
+</td><td class="summaryTableOwnerCol">Tweetr</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getReplies()">getReplies</a>(since_id:String = null, since_date:String = null, page:int = 0):void</div>
+<div class="summaryTableDescription">
+         Returns the 20 most recent </div>
+</td><td class="summaryTableOwnerCol">Tweetr</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getSentDirectMessages()">getSentDirectMessages</a>(since_id:String = null, since_date:String = null, page:int = 0):void</div>
+<div class="summaryTableDescription">
+         Returns a list of the 20 most recent direct messages sent by the authenticating user.</div>
+</td><td class="summaryTableOwnerCol">Tweetr</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getSingleTweet()">getSingleTweet</a>(id:int):void</div>
+<div class="summaryTableDescription">
+         Returns a single status, specified by the id parameter below.</div>
+</td><td class="summaryTableOwnerCol">Tweetr</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getUserDetails()">getUserDetails</a>(id:String = null, email:String = null):void</div>
+<div class="summaryTableDescription">
+         Returns extended information of a given user, specified by ID or screen name.</div>
+</td><td class="summaryTableOwnerCol">Tweetr</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getUserTimeLine()">getUserTimeLine</a>(id:String = null, since_id:String = null, since_date:String = null, count:int = 0, page:int = 0):void</div>
+<div class="summaryTableDescription">
+         Returns the 20 most recent statuses posted from the authenticating user.</div>
+</td><td class="summaryTableOwnerCol">Tweetr</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#hasFriendship()">hasFriendship</a>(userA:String, userB:String):void</div>
+<div class="summaryTableDescription">
+         Tests if a friendship exists between two users.</div>
+</td><td class="summaryTableOwnerCol">Tweetr</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#search()">search</a>(searchString:String, lang:String = null, numTweets:int = 15, page:int = 1, since_id:int = 0, geocode:String = null):void</div>
+<div class="summaryTableDescription">
+   Returns tweets that match a specified query.</div>
+</td><td class="summaryTableOwnerCol">Tweetr</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#sendDirectMessage()">sendDirectMessage</a>(text:String, user:String):void</div>
+<div class="summaryTableDescription">
+         Sends a new direct message to the specified user from the authenticating user.</div>
+</td><td class="summaryTableOwnerCol">Tweetr</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#sendTweet()">sendTweet</a>(status:String, inReplyTo:int = 0):void</div>
+<div class="summaryTableDescription">
+         Updates the authenticating user's status.</div>
+</td><td class="summaryTableOwnerCol">Tweetr</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#trends()">trends</a>():void</div>
+<div class="summaryTableDescription">
+   Returns the top ten queries that are currently trending on Twitter.</div>
+</td><td class="summaryTableOwnerCol">Tweetr</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#unblockUser()">unblockUser</a>(id:String):void</div>
+<div class="summaryTableDescription">
+   Un-blocks the user specified in the ID parameter as the authenticating user.</div>
+</td><td class="summaryTableOwnerCol">Tweetr</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#unfollowUser()">unfollowUser</a>(id:String):void</div>
+<div class="summaryTableDescription">
+   Disables notifications for updates from the specified user to the authenticating user.</div>
+</td><td class="summaryTableOwnerCol">Tweetr</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#updateProfile()">updateProfile</a>(name:String = null, email:String = null, url:String = null, location:String = null, description:String = null):void</div>
+<div class="summaryTableDescription">
+   Sets values that users are able to set under the "Account" tab of their settings page.</div>
+</td><td class="summaryTableOwnerCol">Tweetr</td>
+</tr>
+</table>
+</div>
+<a name="eventSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Events</div>
+<table id="summaryTableEvent" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Event</th><th>Summary</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:complete">complete</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+  Dispatched when the Tweetr has Completed a Request.</td><td class="summaryTableOwnerCol">Tweetr</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:failed">failed</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+     Dispatched when something goes wrong while trying to request something from twitter
+     </td><td class="summaryTableOwnerCol">Tweetr</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:status">status</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+     Merely for Informational purposes.</td><td class="summaryTableOwnerCol">Tweetr</td>
+</tr>
+</table>
+</div>
+<a name="constantSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Constants</div>
+<table id="summaryTableConstant" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#RETURN_TYPE_BASIC_USER_INFO">RETURN_TYPE_BASIC_USER_INFO</a> : String = "users"<div class="summaryTableDescription">[static] Return type defining what type of return Object you can expect, in this case: <code>UserData</code> </div>
+</td><td class="summaryTableOwnerCol">Tweetr</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#RETURN_TYPE_BOOLEAN">RETURN_TYPE_BOOLEAN</a> : String = "bool"<div class="summaryTableDescription">[static] Return type defining what type of return Object you can expect, in this case a Boolean value </div>
+</td><td class="summaryTableOwnerCol">Tweetr</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#RETURN_TYPE_DIRECT_MESSAGE">RETURN_TYPE_DIRECT_MESSAGE</a> : String = "direct_message"<div class="summaryTableDescription">[static] Return type defining what type of return Object you can expect, in this case: <code>DirectMessageData</code> </div>
+</td><td class="summaryTableOwnerCol">Tweetr</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#RETURN_TYPE_EXTENDED_USER_INFO">RETURN_TYPE_EXTENDED_USER_INFO</a> : String = "extended_user_info"<div class="summaryTableDescription">[static] Return type defining what type of return Object you can expect, in this case: <code>ExtendedUserData</code> </div>
+</td><td class="summaryTableOwnerCol">Tweetr</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#RETURN_TYPE_HASH">RETURN_TYPE_HASH</a> : String = "hash"<div class="summaryTableDescription">[static] Return type defining what type of return Object you can expect, in this case: <code>HashData</code> </div>
+</td><td class="summaryTableOwnerCol">Tweetr</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#RETURN_TYPE_SEARCH_RESULTS">RETURN_TYPE_SEARCH_RESULTS</a> : String = "search"<div class="summaryTableDescription">[static] Return type defining what type of return Object you can expect, in this case: <code>SearchResultData</code> </div>
+</td><td class="summaryTableOwnerCol">Tweetr</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#RETURN_TYPE_STATUS">RETURN_TYPE_STATUS</a> : String = "status"<div class="summaryTableDescription">[static] Return type defining what type of return Object you can expect, in this case: <code>StatusData</code> </div>
+</td><td class="summaryTableOwnerCol">Tweetr</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#RETURN_TYPE_TRENDS_RESULTS">RETURN_TYPE_TRENDS_RESULTS</a> : String = "trends"<div class="summaryTableDescription">[static] Return type defining what type of return Object you can expect, in this case: <code>TrendData/code> </div>
+</td><td class="summaryTableOwnerCol">Tweetr</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#version">version</a> : String = "0.9"<div class="summaryTableDescription">[static] Version String of the Tweetr Library </div>
+</td><td class="summaryTableOwnerCol">Tweetr</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="propertyDetail"></a>
+<div class="detailSectionHeader">Property detail</div>
+<a name="browserAuth"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">browserAuth</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var browserAuth:Boolean = true</code><p>
+         Get/Set if Browser interal Authorization Scheme should be used. 
+         Only needs to be set to false if you use this library with AIR.
+         </p></div>
+<a name="password"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">password</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>password:String</code>&nbsp;&nbsp;[write-only]<p> Set the users password </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set password(value:String):void</code>
+<br>
+</div>
+<a name="returnType"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">returnType</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>returnType:String</code>&nbsp;&nbsp;[read-only]<p> Return type of the current response </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get returnType():String</code>
+<br>
+</div>
+<a name="serviceHost"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">serviceHost</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var serviceHost:String = "twitter.com"</code><p>
+         Service Host URL you want to use without "http://".
+         This has to be changed if you are going to use tweetr
+         from a web app. Since the crossdomain policy of twitter.com
+         is very restrictive. use Tweetr's own PHPProxy Class for this. 
+         </p></div>
+<a name="username"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">username</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>username:String</code>&nbsp;&nbsp;[write-only]<p> Set the username  </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set username(value:String):void</code>
+<br>
+</div>
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor detail</div>
+<a name="Tweetr()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">Tweetr</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function Tweetr(username:String = null, password:String = null)</code><p>
+         Creates a new Tweetr Instance
+         </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">username</span>:String</code> (default = <code>null</code>)<code></code> &mdash;   Username is optional at this point but is required for most twitter api calls
+         </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">password</span>:String</code> (default = <code>null</code>)<code></code> &mdash;   Password is optional at this point but is required for most twitter api calls
+         </td>
+</tr>
+</table>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="blockUser()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">blockUser</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function blockUser(id:String):void</code><p>
+   Blocks the user specified in the ID parameter as the authenticating user.  
+   Returns the blocked user in the requested format when successful.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">id</span>:String</code> &mdash;   Required.  The ID or screen_name of the user to block.
+   </td>
+</tr>
+</table>
+</div>
+<a name="createFavorite()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">createFavorite</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function createFavorite(id:int):void</code><p>
+   Favorites the status specified in the ID parameter as the authenticating user.  
+   Returns the favorite status when successful.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">id</span>:int</code> &mdash;    Required.  The ID of the status to favorite.
+   </td>
+</tr>
+</table>
+</div>
+<a name="createFriendship()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">createFriendship</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function createFriendship(id:String, follow:Boolean = true):void</code><p>
+         Befriends the user specified in the ID parameter as the authenticating user.
+         Returns the befriended user in the requested format when successful.  
+         Returns a string describing the failure condition when unsuccessful.
+         </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">id</span>:String</code> &mdash;         The ID or screen name of the user to befriend
+         </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">follow</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash;     Enable notifications for the target user in addition to becoming friends. Default is true.
+         </td>
+</tr>
+</table>
+</div>
+<a name="destroy()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">destroy</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function destroy():void</code><p>
+         Completely destroys the instance and frees all objects for the garbage
+         collector by setting their references to null.
+         </p></div>
+<a name="destroyDirectMessage()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">destroyDirectMessage</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function destroyDirectMessage(id:int):void</code><p>
+         Destroys the direct message specified in the required ID parameter.  
+         The authenticating user must be the recipient of the specified direct message.
+         </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">id</span>:int</code> &mdash;   Required. The ID of the direct message to destroy
+         </td>
+</tr>
+</table>
+</div>
+<a name="destroyFavorite()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">destroyFavorite</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function destroyFavorite(id:int):void</code><p>
+   Un-favorites the status specified in the ID parameter as the authenticating user.  
+   Returns the un-favorited status when successful.  
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">id</span>:int</code> &mdash;   Required.  The ID of the status to un-favorite.
+   </td>
+</tr>
+</table>
+</div>
+<a name="destroyFriendship()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">destroyFriendship</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function destroyFriendship(id:String):void</code><p>
+         Discontinues friendship with the user specified in the ID parameter as the authenticating user.  
+         Returns the un-friended user in the requested format when successful.  
+         Returns a string describing the failure condition when unsuccessful.  
+         </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">id</span>:String</code> &mdash;    The ID or screen name of the user with whom to discontinue friendship.
+         </td>
+</tr>
+</table>
+</div>
+<a name="destroyTweet()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">destroyTweet</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function destroyTweet(id:int):void</code><p>
+         Destroys the status specified by the required ID parameter.
+         The authenticating user must be the author of the specified status.
+         </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">id</span>:int</code> &mdash;   Required. The ID of the status to destroy
+         </td>
+</tr>
+</table>
+</div>
+<a name="followUser()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">followUser</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function followUser(id:String):void</code><p>
+   Enables notifications for updates from the specified user to the authenticating user.  Returns the specified user when successful.
+   NOTE: The Notification Methods require the authenticated user to already be friends with the specified user otherwise 
+   a failed event will be fired.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">id</span>:String</code> &mdash;    Required.  The ID or screen name of the user to follow.
+   </td>
+</tr>
+</table>
+</div>
+<a name="getFavorites()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getFavorites</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getFavorites(id:String, page:int = 0):void</code><p>
+   Returns the 20 most recent favorite statuses for the authenticating user or user specified by the ID parameter in the requested format. 
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">id</span>:String</code> &mdash;      Optional.  The ID or screen name of the user for whom to request a list of favorite statuses
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">page</span>:int</code> (default = <code>0</code>)<code></code> &mdash;    Optional. Retrieves the 20 next most recent favorite statuses.
+   </td>
+</tr>
+</table>
+</div>
+<a name="getFollowers()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getFollowers</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getFollowers(id:String = null, page:int = 0):void</code><p>
+         Returns the authenticating user's followers, each with current status inline.  
+         They are ordered by the order in which they joined Twitter (this is going to be changed).
+         </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">id</span>:String</code> (default = <code>null</code>)<code></code> &mdash;      Optional. The ID or screen name of the user for whom to request a list of followers.
+         </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">page</span>:int</code> (default = <code>0</code>)<code></code> &mdash;    Optional. Retrieves the next 100 followers.
+         </td>
+</tr>
+</table>
+</div>
+<a name="getFriends()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getFriends</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getFriends(id:String = null, page:int = 0):void</code><p>
+         Returns up to 100 of the authenticating user's friends who have 
+         most recently updated, each with current status inline. 
+         It's also possible to request another user's recent friends list via the id parameter.
+         </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">id</span>:String</code> (default = <code>null</code>)<code></code> &mdash;      Optional. The ID or screen name of the user for whom to request a list of friends.
+         </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">page</span>:int</code> (default = <code>0</code>)<code></code> &mdash;    Optional. Retrieves the next 100 friends.
+         </td>
+</tr>
+</table>
+</div>
+<a name="getFriendsTimeLine()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getFriendsTimeLine</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getFriendsTimeLine(since_id:String = null, since_date:String = null, count:int = 0, page:int = 0):void</code><p>
+         Returns the 20 most recent statuses posted by the authenticating user and that user's friends. 
+         This is the equivalent of /home on the Web.
+         </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">since_id</span>:String</code> (default = <code>null</code>)<code></code> &mdash;        Optional.  Returns only statuses with an ID greater than (that is, more recent than) the specified ID.
+         </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">since_date</span>:String</code> (default = <code>null</code>)<code></code> &mdash;      Optional. Narrows the returned results to just those statuses created after the specified HTTP-formatted date, up to 24 hours old.
+         </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">count</span>:int</code> (default = <code>0</code>)<code></code> &mdash;           Optional. Specifies the number of statuses to retrieve. May not be greater than 200.
+         </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">page</span>:int</code> (default = <code>0</code>)<code></code> &mdash;            Optional. Provides paging. Ex. http://twitter.com/statuses/user_timeline.xml?page=3
+         </td>
+</tr>
+</table>
+</div>
+<a name="getPublicTimeLine()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getPublicTimeLine</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getPublicTimeLine():void</code><p>
+         Returns the 20 most recent statuses from non-protected users who have set a custom user icon.  
+         Does not require authentication.  Note that the public timeline is cached for 60 seconds so 
+         requesting it more often than that is a waste of resources.
+         </p></div>
+<a name="getRateLimitStatus()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getRateLimitStatus</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getRateLimitStatus():void</code><p>
+   Returns the remaining number of API requests available to the requesting user 
+   before the API limit is reached for the current hour. 
+   Calls to rate_limit_status do not count against the rate limit.  
+   </p></div>
+<a name="getReceivedDirectMessages()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getReceivedDirectMessages</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getReceivedDirectMessages(since_id:String = null, since_date:String = null, page:int = 0):void</code><p>
+         Returns a list of the 20 most recent direct messages sent to the authenticating user.
+         The XML includes detailed information about the sending and recipient users.
+         </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">since_id</span>:String</code> (default = <code>null</code>)<code></code> &mdash;      Optional. Returns only direct messages with an ID greater than (that is, more recent than) the specified ID. 
+         </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">since_date</span>:String</code> (default = <code>null</code>)<code></code> &mdash;    Optional. Narrows the resulting list of direct messages to just those sent after the specified HTTP-formatted date, up to 24 hours old.
+         </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">page</span>:int</code> (default = <code>0</code>)<code></code> &mdash;          Optional. Retrieves the 20 next most recent direct messages.
+         </td>
+</tr>
+</table>
+</div>
+<a name="getReplies()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getReplies</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getReplies(since_id:String = null, since_date:String = null, page:int = 0):void</code><p>
+         Returns the 20 most recent </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">since_id</span>:String</code> (default = <code>null</code>)<code></code> &mdash;        Optional. Returns only statuses with an ID greater than (that is, more recent than) the specified ID.
+         </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">since_date</span>:String</code> (default = <code>null</code>)<code></code> &mdash;      Optional. Narrows the returned results to just those statuses created after the specified HTTP-formatted date, up to 24 hours old.
+         </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">page</span>:int</code> (default = <code>0</code>)<code></code> &mdash;            Optional. Provides paging. Ex. http://twitter.com/statuses/user_timeline.xml?page=3
+         </td>
+</tr>
+</table>
+</div>
+<a name="getSentDirectMessages()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getSentDirectMessages</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getSentDirectMessages(since_id:String = null, since_date:String = null, page:int = 0):void</code><p>
+         Returns a list of the 20 most recent direct messages sent by the authenticating user.
+         The XML includes detailed information about the sending and recipient users.
+         </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">since_id</span>:String</code> (default = <code>null</code>)<code></code> &mdash;      Optional. Returns only direct messages with an ID greater than (that is, more recent than) the specified ID. 
+         </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">since_date</span>:String</code> (default = <code>null</code>)<code></code> &mdash;    Optional. Narrows the resulting list of direct messages to just those sent after the specified HTTP-formatted date, up to 24 hours old.
+         </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">page</span>:int</code> (default = <code>0</code>)<code></code> &mdash;          Optional. Retrieves the 20 next most recent direct messages.
+         </td>
+</tr>
+</table>
+</div>
+<a name="getSingleTweet()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getSingleTweet</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getSingleTweet(id:int):void</code><p>
+         Returns a single status, specified by the id parameter below.  The status's author will be returned inline.
+         </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">id</span>:int</code> &mdash;   Tweet ID
+         </td>
+</tr>
+</table>
+</div>
+<a name="getUserDetails()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getUserDetails</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getUserDetails(id:String = null, email:String = null):void</code><p>
+         Returns extended information of a given user, specified by ID or screen name.  
+         This information includes design settings, so third party developers can theme 
+         their widgets according to a given user's preferences. You must be properly 
+         authenticated to request the page of a protected user.
+         </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">id</span>:String</code> (default = <code>null</code>)<code></code> &mdash;       The ID or screen name of a user.
+         </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">email</span>:String</code> (default = <code>null</code>)<code></code> &mdash;    May be used in place of "id" parameter above.  The email address of a user.
+         </td>
+</tr>
+</table>
+</div>
+<a name="getUserTimeLine()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getUserTimeLine</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getUserTimeLine(id:String = null, since_id:String = null, since_date:String = null, count:int = 0, page:int = 0):void</code><p>
+         Returns the 20 most recent statuses posted from the authenticating user. It's also possible to request 
+         another user's timeline via the id parameter. This is the equivalent of the Web /archive page for your 
+         own user, or the profile page for a third party.
+         </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">id</span>:String</code> (default = <code>null</code>)<code></code> &mdash;              Optional. Specifies the ID or screen name of the user for whom to return the friends_timeline.
+         </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">since_id</span>:String</code> (default = <code>null</code>)<code></code> &mdash;        Optional. Returns only statuses with an ID greater than (that is, more recent than) the specified ID.
+         </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">since_date</span>:String</code> (default = <code>null</code>)<code></code> &mdash;      Optional. Narrows the returned results to just those statuses created after the specified HTTP-formatted date, up to 24 hours old.
+         </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">count</span>:int</code> (default = <code>0</code>)<code></code> &mdash;           Optional. Specifies the number of statuses to retrieve. May not be greater than 200.
+         </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">page</span>:int</code> (default = <code>0</code>)<code></code> &mdash;            Optional. Provides paging. Ex. http://twitter.com/statuses/user_timeline.xml?page=3
+         </td>
+</tr>
+</table>
+</div>
+<a name="hasFriendship()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">hasFriendship</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function hasFriendship(userA:String, userB:String):void</code><p>
+         Tests if a friendship exists between two users.
+         </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">userA</span>:String</code> &mdash;      Required.  The ID or screen_name of the first user to test friendship for.
+         </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">userB</span>:String</code> &mdash;      Required.  The ID or screen_name of the second user to test friendship for.
+         </td>
+</tr>
+</table>
+</div>
+<a name="search()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">search</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function search(searchString:String, lang:String = null, numTweets:int = 15, page:int = 1, since_id:int = 0, geocode:String = null):void</code><p>
+   Returns tweets that match a specified query.  You can use a variety of search operators in your query. For a list
+   of available operators check out <link>http://search.twitter.com/operators</link>
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">searchString</span>:String</code> &mdash;      Your query string
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">lang</span>:String</code> (default = <code>null</code>)<code></code> &mdash;              Optional. Restricts tweets to the given language given by an ISO 639-1 code. (en,de,it,fr .. )
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">numTweets</span>:int</code> (default = <code>15</code>)<code></code> &mdash;         Optional. The number of tweets to return per page, up to a max of 100.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">page</span>:int</code> (default = <code>1</code>)<code></code> &mdash;              Optional. The page number (starting at 1) to return, up to a max of roughly 1500 results ((based on numTweets page).
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">since_id</span>:int</code> (default = <code>0</code>)<code></code> &mdash;          Optional. Returns tweets with status ids greater than the given id.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">geocode</span>:String</code> (default = <code>null</code>)<code></code> &mdash;           Optional. Returns tweets by users located within a given radius of the given Latitude/longitude. Ex. geocode=40.757929,-73.985506,25km
+   </td>
+</tr>
+</table>
+</div>
+<a name="sendDirectMessage()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">sendDirectMessage</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function sendDirectMessage(text:String, user:String):void</code><p>
+         Sends a new direct message to the specified user from the authenticating user.
+         </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">text</span>:String</code> &mdash;   Required. The text of your direct message, keep it under 140 characters or else it will be cut! 
+         </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">user</span>:String</code> &mdash;   Required. The ID or screen name of the recipient user.
+         </td>
+</tr>
+</table>
+</div>
+<a name="sendTweet()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">sendTweet</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function sendTweet(status:String, inReplyTo:int = 0):void</code><p>
+         Updates the authenticating user's status. 
+         A status update with text identical to the authenticating user's 
+         current status will be ignored.
+         </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">status</span>:String</code> &mdash;      Required. The text of your status update. Should not be more than 140 characters.
+         </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">inReplyTo</span>:int</code> (default = <code>0</code>)<code></code> &mdash;   Optional. The ID of an existing status that the status to be posted is in reply to. Invalid/missing status IDs will be ignored.
+         </td>
+</tr>
+</table>
+</div>
+<a name="trends()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">trends</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function trends():void</code><p>
+   Returns the top ten queries that are currently trending on Twitter.
+   </p></div>
+<a name="unblockUser()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">unblockUser</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function unblockUser(id:String):void</code><p>
+   Un-blocks the user specified in the ID parameter as the authenticating user. 
+   Returns the un-blocked user in the requested format when successful.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">id</span>:String</code> &mdash;   Required.  The ID or screen_name of the user to un-block.
+   </td>
+</tr>
+</table>
+</div>
+<a name="unfollowUser()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">unfollowUser</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function unfollowUser(id:String):void</code><p>
+   Disables notifications for updates from the specified user to the authenticating user.  Returns the specified user when successful.
+   NOTE: The Notification Methods require the authenticated user to already be friends with the specified user otherwise 
+   a failed event will be fired.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">id</span>:String</code> &mdash;    Required.  The ID or screen name of the user to leave
+   </td>
+</tr>
+</table>
+</div>
+<a name="updateProfile()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">updateProfile</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function updateProfile(name:String = null, email:String = null, url:String = null, location:String = null, description:String = null):void</code><p>
+   Sets values that users are able to set under the "Account" tab of their settings page. 
+   Only the parameters specified will be updated
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">name</span>:String</code> (default = <code>null</code>)<code></code> &mdash;            Optional. Maximum of 40 characters.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">email</span>:String</code> (default = <code>null</code>)<code></code> &mdash;           Optional. Maximum of 40 characters. Must be a valid email address.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">url</span>:String</code> (default = <code>null</code>)<code></code> &mdash;             Optional. Maximum of 100 characters. Will be prepended with "http://" if not present.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">location</span>:String</code> (default = <code>null</code>)<code></code> &mdash;        Optional. Maximum of 30 characters. The contents are not normalized or geocoded in any way.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">description</span>:String</code> (default = <code>null</code>)<code></code> &mdash;     Optional. Maximum of 160 characters.
+   </td>
+</tr>
+</table>
+</div>
+<div class="detailSectionHeader">Event detail</div>
+<a name="event:complete"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">complete</td><td class="detailHeaderType">event&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href=""><code>com.swfjunkie.Tweetr.events.TweetEvent</code></a>
+<br>
+<p></p><p>
+  Dispatched when the Tweetr has Completed a Request.
+  </p></div>
+<a name="event:failed"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">failed</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href=""><code>com.swfjunkie.Tweetr.events.TweetEvent</code></a>
+<br>
+<p></p><p>
+     Dispatched when something goes wrong while trying to request something from twitter
+     </p></div>
+<a name="event:status"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">status</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href=""><code>com.swfjunkie.Tweetr.events.TweetEvent</code></a>
+<br>
+<p></p><p>
+     Merely for Informational purposes. Dispatches the http status to the listener
+     </p></div>
+<a name="constantDetail"></a>
+<div class="detailSectionHeader">Constant detail</div>
+<a name="RETURN_TYPE_BASIC_USER_INFO"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">RETURN_TYPE_BASIC_USER_INFO</td><td class="detailHeaderType">constant</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const RETURN_TYPE_BASIC_USER_INFO:String = "users"</code><p> Return type defining what type of return Object you can expect, in this case: <code>UserData</code> </p></div>
+<a name="RETURN_TYPE_BOOLEAN"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">RETURN_TYPE_BOOLEAN</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const RETURN_TYPE_BOOLEAN:String = "bool"</code><p> Return type defining what type of return Object you can expect, in this case a Boolean value </p></div>
+<a name="RETURN_TYPE_DIRECT_MESSAGE"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">RETURN_TYPE_DIRECT_MESSAGE</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const RETURN_TYPE_DIRECT_MESSAGE:String = "direct_message"</code><p> Return type defining what type of return Object you can expect, in this case: <code>DirectMessageData</code> </p></div>
+<a name="RETURN_TYPE_EXTENDED_USER_INFO"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">RETURN_TYPE_EXTENDED_USER_INFO</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const RETURN_TYPE_EXTENDED_USER_INFO:String = "extended_user_info"</code><p> Return type defining what type of return Object you can expect, in this case: <code>ExtendedUserData</code> </p></div>
+<a name="RETURN_TYPE_HASH"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">RETURN_TYPE_HASH</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const RETURN_TYPE_HASH:String = "hash"</code><p> Return type defining what type of return Object you can expect, in this case: <code>HashData</code> </p></div>
+<a name="RETURN_TYPE_SEARCH_RESULTS"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">RETURN_TYPE_SEARCH_RESULTS</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const RETURN_TYPE_SEARCH_RESULTS:String = "search"</code><p> Return type defining what type of return Object you can expect, in this case: <code>SearchResultData</code> </p></div>
+<a name="RETURN_TYPE_STATUS"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">RETURN_TYPE_STATUS</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const RETURN_TYPE_STATUS:String = "status"</code><p> Return type defining what type of return Object you can expect, in this case: <code>StatusData</code> </p></div>
+<a name="RETURN_TYPE_TRENDS_RESULTS"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">RETURN_TYPE_TRENDS_RESULTS</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const RETURN_TYPE_TRENDS_RESULTS:String = "trends"</code><p> Return type defining what type of return Object you can expect, in this case: <code>TrendData/code> </p></div>
+<a name="version"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">version</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const version:String = "0.9"</code><p> Version String of the Tweetr Library </p></div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright">[swfjunkie.com] - Open source under Simplified BSD</center>
+</div>
+</body>
+</html>
+<!--[swfjunkie.com] - Open source under Simplified BSD-->

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!-- in case the proxy is not on the same (sub)domain
+     use this crossdomain file as a template. 
+     
+     Has to be put to the root folder of your domain.
+-->
+<cross-domain-policy>
+  <allow-access-from domain="*" />
+</cross-domain-policy>

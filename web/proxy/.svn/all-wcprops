@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 32
+/svn/!svn/ver/40/trunk/web/proxy
+END
+Tweetr.php
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/40/trunk/web/proxy/Tweetr.php
+END
+index.php
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/40/trunk/web/proxy/index.php
+END
+crossdomain.xml
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/24/trunk/web/proxy/crossdomain.xml
+END
+.htaccess
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/18/trunk/web/proxy/.htaccess
+END

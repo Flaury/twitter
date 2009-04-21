@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" xmlns="*" 
+	xmlns:primitive="org.un.cava.birdeye.ravis.assets.icons.primitives.*" 
+	creationComplete="setNodeCircle()"
+	>
+
+	<!-- This a basic circle itemRenderer for a node. -->
+	
+	<mx:VBox verticalAlign="bottom" horizontalAlign="center" verticalGap="0" >
+	<mx:Spacer height="11" />
+	<primitive:Circle id="circle" toolTip="{this.data.data.@name}" 
+            />
+    <mx:Text id="nodeText" text="{this.data.data.@name}" width="75" height="11" textAlign="center" fontSize="10" />
+	</mx:VBox>
+	
+	<mx:Script>
+		<![CDATA[
+			
+ 		
+			private function setNodeCircle():void {
+			
+			circle.color=0x333333;
+			circle.width=25;
+			circle.height=25;
+			circle.
+   			}
+		]]>
+	</mx:Script>	
+</mx:Canvas>

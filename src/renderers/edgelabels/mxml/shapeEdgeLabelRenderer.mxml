@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:VBox xmlns:mx="http://www.adobe.com/2006/mxml"
+	verticalAlign="middle" horizontalAlign="center"
+	>
+	<mx:Box id="rectangle" toolTip="{this.data.data.@edgeLabel}" 
+		width="8" height="8" backgroundColor="0x666666"  />
+	
+</mx:VBox>

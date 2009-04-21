@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" viewSourceURL="srcview/index.html" applicationComplete="init();">
+	<mx:Script>
+        <![CDATA[
+
+            import mx.controls.Alert;
+            import flash.net.navigateToURL;
+            import com.swfjunkie.tweetr.Tweetr;
+            import com.swfjunkie.tweetr.events.TweetEvent;
+            import com.swfjunkie.tweetr.data.objects.StatusData;
+        
+        	/**
+        	 * A Simple example of how to use the Tweetr API
+	 		 * @author Sandro Ducceschi [swfjunkie.com, Switzerland]
+	 		 */
+	 		
+	 		/**
+	 		 * @private
+	 		 * the tweetr instance
+	 		 */
+	 		private var tweetr:Tweetr;
+	 		
+	 		/**
+	 		 * @private
+	 		 * integer variable containing the returned tweet id
+	 		 * after we send a tweet
+	 		 */ 
+	 		private var tweetId:int;
+	 		
+	 		/**
+	 		 * Here the Example actually starts ;)
+	 		 */
+        	public function init():void
+        	{
+        	    // create a new tweetr instance
+            	tweetr = new Tweetr();
+            	// since we are using it on the web, set 
+            	// the serviceHost to the tweetr php-proxy
+            	tweetr.serviceHost = "labs.swfjunkie.com/tweetr/proxy";
+                
+                // add event listeners
+            	tweetr.addEventListener(TweetEvent.COMPLETE, handleLoad);
+            	tweetr.addEventListener(TweetEvent.FAILED, handleFail);
+        	}
+        	
+        	/**
+        	 * @private
+        	 * If everything goes well, we get an event with an
+        	 * array of StatusData Objects we switch the viewstack
+        	 * and assign the id of the first statusdata object to the tweetId variable
+        	 */
+        	private function handleLoad(event:TweetEvent):void
+        	{
+        	    stack.selectedIndex = 1;
+        	    tweetId = StatusData(event.responseArray[0]).id;
+        	}
+        	
+        	/**
+        	 * @private
+        	 * If something go wrong, show an alert window with the info
+        	 */ 
+        	private function handleFail(event:TweetEvent):void
+        	{
+        	    Alert.show(event.info,"Epic Fail");
+        	}
+        	
+        	
+        	//--------------------------------------------------
+        	// Example specific methods
+        	//--------------------------------------------------
+        	
+        	/**
+        	 * @private
+        	 * With this you can send a tweet 
+        	 */ 
+        	private function sendTweet():void
+        	{
+        	    // make sure we got a username and
+        	    // password before sending the tweet out.
+        	    if(username.text != "" && password.text != "")
+        	    {
+    	            tweetr.username = username.text;
+    	            tweetr.password = password.text;
+    	            tweetr.sendTweet(tweet.text);
+    	        }
+    	        else
+    	        {
+        	        Alert.show("Username & Password required for this example! Don't worry, they won't get saved.");
+        	    }
+        	}
+        	
+        	/**
+        	 * When the tweet has been sent successfully you can press the "See your tweet" message
+        	 * which will redirect you to the twitter website.
+        	 */
+        	private function goToTweet():void
+        	{
+        	    navigateToURL(new URLRequest("http://twitter.com/"+username.text+"/status/"+tweetId),"_blank");
+        	}
+        	
+        ]]>
+    </mx:Script>
+    
+    <mx:ViewStack id="stack" creationPolicy="all">
+        
+        <mx:Panel title="Send a Tweet" width="300" height="270" horizontalAlign="center">
+            <mx:Form horizontalScrollPolicy="off" verticalScrollPolicy="off" >
+                <mx:FormItem label="Username" required="true"><mx:TextInput id="username"/></mx:FormItem>
+                <mx:FormItem label="Pasword" required="true"><mx:TextInput id="password" displayAsPassword="true"/></mx:FormItem>
+                <mx:FormItem label="Tweet"><mx:TextArea id="tweet" maxChars="140" height="90"/></mx:FormItem>
+            </mx:Form>
+            <mx:Button label="Send Tweet" click="sendTweet()" />
+    	</mx:Panel>
+    	
+    	<mx:Panel title="Tweet sent successfully!" horizontalAlign="center" verticalAlign="middle">
+    	    <mx:Button label="See your tweet" click="goToTweet()" />
+    	</mx:Panel>
+    	
+    </mx:ViewStack>
+</mx:Application>

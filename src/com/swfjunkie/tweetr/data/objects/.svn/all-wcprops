@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/6/trunk/src/com/swfjunkie/tweetr/data/objects
+END
+SearchResultData.as
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/6/trunk/src/com/swfjunkie/tweetr/data/objects/SearchResultData.as
+END
+ExtendedUserData.as
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/6/trunk/src/com/swfjunkie/tweetr/data/objects/ExtendedUserData.as
+END
+StatusData.as
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/6/trunk/src/com/swfjunkie/tweetr/data/objects/StatusData.as
+END
+HashData.as
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/6/trunk/src/com/swfjunkie/tweetr/data/objects/HashData.as
+END
+DirectMessageData.as
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/6/trunk/src/com/swfjunkie/tweetr/data/objects/DirectMessageData.as
+END
+TrendData.as
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/6/trunk/src/com/swfjunkie/tweetr/data/objects/TrendData.as
+END
+UserData.as
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/6/trunk/src/com/swfjunkie/tweetr/data/objects/UserData.as
+END

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:WindowedApplication xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" applicationComplete="init()" viewSourceURL="srcview/index.html">
+	<mx:Script>
+        <![CDATA[
+
+            import com.swfjunkie.tweetr.events.TweetEvent;
+            import com.swfjunkie.tweetr.utils.TweetUtil;
+            import com.swfjunkie.tweetr.data.objects.StatusData;
+            import com.swfjunkie.tweetr.Tweetr;
+        
+        	/**
+        	 * A simple AIR usage example
+	 		 * @author Sandro Ducceschi [swfjunkie.com, Switzerland]
+	 		 */
+            
+            //--------------------------------------------------------------------------
+        	//
+        	//  Class variables
+        	//
+        	//--------------------------------------------------------------------------
+        	
+        	//--------------------------------------------------------------------------
+        	//
+        	//  Initialization
+        	//
+        	//--------------------------------------------------------------------------
+        	
+        	public function init():void
+        	{
+        	    // create a tweetr instance
+            	tweetr = new Tweetr();
+            	
+            	// set the browserAuth to false so we actually use
+            	// the AIR authentication scheme
+                tweetr.browserAuth = false;
+                
+                // pass the username & password
+                tweetr.username = "Flaury";
+                tweetr.password = "fleurbite";
+                
+                // add some eventlisteners
+                tweetr.addEventListener(TweetEvent.COMPLETE, handleTweetsLoaded);
+                tweetr.addEventListener(TweetEvent.FAILED, handleTweetsFail);
+                   
+                // call a api method
+                tweetr.getUserTimeLine();
+        	}
+        	
+        	//--------------------------------------------------------------------------
+        	//
+        	//  Variables
+        	//
+        	//--------------------------------------------------------------------------
+        	private var tweetr:Tweetr;
+	        //--------------------------------------------------------------------------
+	        //
+			//  Properties
+			//
+			//--------------------------------------------------------------------------
+			
+	        //--------------------------------------------------------------------------
+	        //
+	        //  Additional getters and setters
+	        //
+	        //--------------------------------------------------------------------------
+                
+	        //--------------------------------------------------------------------------
+	        //
+	        //  API
+	        //
+	        //--------------------------------------------------------------------------
+            
+	        //--------------------------------------------------------------------------
+	        //
+	        //  Methods
+	        //
+	        //--------------------------------------------------------------------------
+	        //--------------------------------------------------------------------------
+	        //
+	        //  Broadcasting
+	        //
+	        //--------------------------------------------------------------------------
+	        
+	        //--------------------------------------------------------------------------
+	        //
+	        //  Eventhandling
+	        //
+	        //--------------------------------------------------------------------------
+	        /**
+	         * @private
+	         * Successfully called a tweetr method
+	         */ 
+	        private function handleTweetsLoaded(event:TweetEvent):void
+            {
+                // assign the latest response to a data object
+                var tweet:StatusData = event.responseArray[0] as StatusData;
+                
+                // load the users avatar image
+                avatar.load(tweet.user.profileImageUrl);
+                
+                // assign the text to the text instance
+                text.htmlText = "<p><b>" + 
+                                 "<a target=\"_blank\" href=\"http://twitter.com/"+tweet.user.screenName+"\">@"+tweet.user.screenName+"</a></b> " + 
+                                 ""+tweet.text + "" + 
+                                 "<br><span>"+TweetUtil.returnTweetAge(tweet.createdAt)+"</span></p>";
+            }
+            
+            /**
+             * @private
+             * This is supposed to catch any errors that might occur.
+             */ 
+            private function handleTweetsFail(event:TweetEvent):void
+            {
+                // error handling goes here
+            }
+        ]]>
+    </mx:Script>
+    
+	<mx:Canvas  width="350" minHeight="100" horizontalCenter="0" verticalCenter="0" borderColor="#D4D4D4" cornerRadius="12" 
+	            backgroundColor="#000000" borderStyle="solid" borderThickness="2" backgroundAlpha="0.7" dropShadowEnabled="true">
+	            
+	    <mx:HBox width="100%" height="100%" verticalAlign="middle" paddingLeft="10" paddingTop="10" paddingRight="10" paddingBottom="10">
+    	    <mx:Image id="avatar" maxHeight="50" maxWidth="50"/>
+    	    <mx:Text id="text" width="100%" fontFamily="Georgia" fontSize="11" color="#FFFFFF"/>
+	    </mx:HBox>
+	    
+	</mx:Canvas>
+</mx:WindowedApplication>

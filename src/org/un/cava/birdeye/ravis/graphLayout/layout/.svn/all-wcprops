@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/424/trunk/ravis/libRaVis/org/un/cava/birdeye/ravis/graphLayout/layout
+END
+HierarchicalLayouter.as
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/424/trunk/ravis/libRaVis/org/un/cava/birdeye/ravis/graphLayout/layout/HierarchicalLayouter.as
+END
+ISOMLayouter.as
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/424/trunk/ravis/libRaVis/org/un/cava/birdeye/ravis/graphLayout/layout/ISOMLayouter.as
+END
+ILayoutAlgorithm.as
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/99/trunk/ravis/libRaVis/org/un/cava/birdeye/ravis/graphLayout/layout/ILayoutAlgorithm.as
+END
+ConcentricRadialLayouter.as
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/!svn/ver/424/trunk/ravis/libRaVis/org/un/cava/birdeye/ravis/graphLayout/layout/ConcentricRadialLayouter.as
+END
+PhylloTreeDrawingModel.as
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/424/trunk/ravis/libRaVis/org/un/cava/birdeye/ravis/graphLayout/layout/PhylloTreeDrawingModel.as
+END
+CircularLayouter.as
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/!svn/ver/424/trunk/ravis/libRaVis/org/un/cava/birdeye/ravis/graphLayout/layout/CircularLayouter.as
+END
+Hyperbolic2DLayouter.as
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/424/trunk/ravis/libRaVis/org/un/cava/birdeye/ravis/graphLayout/layout/Hyperbolic2DLayouter.as
+END
+IterativeBaseLayouter.as
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/424/trunk/ravis/libRaVis/org/un/cava/birdeye/ravis/graphLayout/layout/IterativeBaseLayouter.as
+END
+ParentCenteredRadialLayouter.as
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/424/trunk/ravis/libRaVis/org/un/cava/birdeye/ravis/graphLayout/layout/ParentCenteredRadialLayouter.as
+END
+ConcentricRadialLayoutDrawing.as
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/!svn/ver/424/trunk/ravis/libRaVis/org/un/cava/birdeye/ravis/graphLayout/layout/ConcentricRadialLayoutDrawing.as
+END
+DirectPlacementLayouter.as
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/424/trunk/ravis/libRaVis/org/un/cava/birdeye/ravis/graphLayout/layout/DirectPlacementLayouter.as
+END
+IAngularLayouter.as
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/99/trunk/ravis/libRaVis/org/un/cava/birdeye/ravis/graphLayout/layout/IAngularLayouter.as
+END
+HierarchicalLayoutDrawing.as
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/!svn/ver/99/trunk/ravis/libRaVis/org/un/cava/birdeye/ravis/graphLayout/layout/HierarchicalLayoutDrawing.as
+END
+AnimatedBaseLayouter.as
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/424/trunk/ravis/libRaVis/org/un/cava/birdeye/ravis/graphLayout/layout/AnimatedBaseLayouter.as
+END
+ForceDirectedLayouter.as
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/424/trunk/ravis/libRaVis/org/un/cava/birdeye/ravis/graphLayout/layout/ForceDirectedLayouter.as
+END
+ParentCenteredDrawingModel.as
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/424/trunk/ravis/libRaVis/org/un/cava/birdeye/ravis/graphLayout/layout/ParentCenteredDrawingModel.as
+END
+BaseLayouter.as
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/424/trunk/ravis/libRaVis/org/un/cava/birdeye/ravis/graphLayout/layout/BaseLayouter.as
+END
+BaseLayoutDrawing.as
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/424/trunk/ravis/libRaVis/org/un/cava/birdeye/ravis/graphLayout/layout/BaseLayoutDrawing.as
+END
+PhylloTreeLayouter.as
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/424/trunk/ravis/libRaVis/org/un/cava/birdeye/ravis/graphLayout/layout/PhylloTreeLayouter.as
+END

@@ -1,0 +1,12 @@
+K 10
+svn:ignore
+V 84
+.actionScriptProperties
+.project
+.settings
+bin-debug
+bin-release
+html-template
+libs
+
+END
