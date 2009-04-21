@@ -189,7 +189,7 @@
 		private function initGraph(begin:int, end:int):void
 		{
        		var stName:String = txtUser.text;
-       		var lgt:int = end - begin ;
+       		var lgt:int = end - begin + 1;
        		
        		
             graphe = <Graph> 
@@ -198,15 +198,15 @@
  			
  			if ( lgt < nb+1)
  			{
- 				createSimpleGraph();
+ 				createSimpleGraph(begin, end);
  			}
  			else
  			{
  				if ( ( nb < lgt) && ( nb > lgt*lgt))
  				{
- 					createComplexGraph();
+ 					createComplexGraph(begin, end);
  				}
- 				else createVeryComplexGraph(); 	
+ 				else createVeryComplexGraph(begin, end); 	
  			}
 		}
 		
@@ -217,17 +217,17 @@
        	* Creation of a graph without under node
        	* 
        	*/
-       	private function createSimpleGraph():void
+       	private function createSimpleGraph(begin:int, end:int):void
        	{
        		
 			var couleur:int = 16;
 			var userData:UserData;
 			var desc:String = '';
 			
-			var lgt:int = mainArr.length;
+			//var lgt:int = mainArr.length;
 
 			
-			for(var i:int = 1; i < lgt; i++)
+			for(var i:int = begin; i < end+1; i++)
            	{
             	userData = mainArr[i];
                	//var obj:Object = {};
@@ -245,7 +245,7 @@
                	/*couleur = couleur + 160000;*/  
            	}
           
-           for(var k:int = 1 ; k < lgt; k++)
+           for(var k:int = begin ; k < end; k++)
            {
                userData = mainArr[k];
              
@@ -263,13 +263,14 @@
        	* Creation of a graph with under node
        	* 
        	*/
-       	private function createComplexGraph():void
+       	private function createComplexGraph(begin:int, end:int):void
        	{
        		
 			var couleur:int = 16;
 			var userData:UserData;
 			var desc:String = '';
-			var nbTotNoeud:int=mainArr.length;
+			//var nbTotNoeud:int=mainArr.length;
+			var nbTotNoeud:int = end - begin + 1;
 			var nbSsNoeud:int=int(nbTotNoeud/20) + 1;
 			var reste:int= nbTotNoeud - (nbSsNoeud - 1)*20;
 
@@ -306,7 +307,7 @@
        	* Creation of a graph with under node
        	* 
        	*/
-       	private function createVeryComplexGraph():void
+       	private function createVeryComplexGraph(begin:int, end:int):void
        	{
        		
        	}
