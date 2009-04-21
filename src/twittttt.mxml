@@ -43,8 +43,8 @@
 		public var graphe:XML;
 		public var noeud:String='';
 		public var edge:String='';
-		public var i:int=0;
-		public var j:int=0;
+		public var i:int=1;
+		public var j:int=1;
 		
 		//number of visibles nodes 
 		public var nb:int=20;
@@ -70,7 +70,7 @@
 
 		private function connect():void
 		{
-        	//ghost.description="";
+        
         	
         	// create a new tweetr instance
             tweetr = new Tweetr();
@@ -89,55 +89,20 @@
             tweetr.addEventListener(TweetEvent.FAILED, handleFail);
 		 
 		 	if (choix==1){
-				mainArr=null;		 	
+				mainArr=[];		 	
             	// so let's retrieve the friends
-            	tweetr.getFriends(txtUser.text, i);
+            	tweetr.getFollowers(txtUser.text, i);
             }
             else 
 			if (choix==0)
 			{
-				mainArr=null;
+				mainArr=[];
             	// so let's retrieve the followers
-            	tweetr.getFollowers(txtUser.text, j);
+            	tweetr.getFriends(txtUser.text, j);
             }
 		 }
 		 
 		 
-		 
-/*		private function retrieveFriends():void
-		{
-			tweetr.getFriends(txtUser.text, i);
-			
-			var i:int=0;
-			while ( retriever.length==100 )
-			{
-				if (mutex==1){
-					tweetr.getFriends(txtUser.text, i);
-					mutex=0;
-					i=i+1;
-				}
-			}		
-		}
-		
-		
-
-
-
-		private function retrieveFollowers():void
-		{
-			tweetr.getFollowers(txtUser.text, j);
-			
-			var j:int=0;
-			while( retriever.length==100)
-			{
-				if (mutex==1){
-					tweetr.getFollowers(txtUser.text, j);
-					mutex=0;
-					j=j+1;
-				}
-			}		
-		}
-*/
 
 		/**
        	* @private
@@ -148,6 +113,7 @@
        	{
        		retriever=event.responseArray;
        		
+       		
        		if (mainArr.length == 0) mainArr = retriever;
        		else mainArr = mainArr.concat(retriever);
        		
@@ -155,26 +121,29 @@
        		if (retriever.length!=100)
        		{
        			mainArr = mainArr.sort();
-       			initGraph(1,mainArr.length);
+       			initGraph(0,mainArr.length);
+       			numb.text = mainArr.length.toString();
+       			
        		}
        		else{
        			if (choix==1){
        				i=i+1;       			
 			   		// so let's retrieve the friends
-            		tweetr.getFriends(txtUser.text, i);
+            		tweetr.getFollowers(txtUser.text, i);
             }
             	else 
 				if (choix==0)
 				{
 					j=j+1;
 					// so let's retrieve the followers
-            		tweetr.getFollowers(txtUser.text, j);
+            		tweetr.getFriends(txtUser.text, j);
             	}
        		} 
        			
        	}
         	        
 				
+
 
 
 		
@@ -206,7 +175,7 @@
  			}
  			else
  			{
- 				if ( ( nb < lgt) && ( nb > lgt*lgt))
+ 				if ( nb < (lgt*lgt))
  				{
  					createComplexGraph(begin, end);
  				}
@@ -246,7 +215,7 @@
                	noeud = 'id= "' + (i+2) + '" name ="'  + userData.name + '" desc="' + desc + '" nodeColor="0x'+ couleur.toString(16) +'" nodeSize="30" nodeClass="tree" nodeIcon="' + i + '" x="10" y="10"' 
                	graphe = graphe.appendChild(<Node{noeud}/>);
                
-               	/*couleur = couleur + 160000;*/  
+               	//couleur = couleur + 160000;  
            	}
           
            for(var k:int = begin ; k < end; k++)
@@ -276,7 +245,7 @@
 			//var nbTotNoeud:int=mainArr.length;
 			var nbTotNoeud:int = end - begin + 1;
 			var nbSsNoeud:int=int(nbTotNoeud/20) + 1;
-			var reste:int= nbTotNoeud - (nbSsNoeud - 1)*20;
+			var reste:int= nbTotNoeud - (nbSsNoeud - 1)*20 -1;
 
 			
 			for(var i:int = 1; i < nbSsNoeud + 1; i++)
@@ -433,7 +402,9 @@
 				<mx:Label id="nodeName" text="" />
 				<mx:Label text="Friend Desc:" fontWeight="bold" />
 				<mx:Label id="nodeDesc" text="" />
-				<mx:Label text="Friend Image:" fontWeight="bold" />
+				<mx:Label text="Number of Friends:" fontWeight="bold" />
+				<mx:Label id="numb" text="Text" width="63"/>
+				
 							
 			</mx:VBox>
 		<controls:DegreesOfSeparation id="dosSlider" width="200" bottom="0" left="5" vgraph="{vgraph}" />
