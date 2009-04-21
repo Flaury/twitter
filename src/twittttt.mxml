@@ -34,9 +34,9 @@
 
 		//declarations of variables
 		public var choix:int;
-		public var ghost:UserData = new UserData;
-		public var mainArr:Array=new Array(ghost);
-		public var retriever:Array=new Array(1);
+		//public var ghost:UserData = new UserData;
+		public var mainArr:Array=new Array();
+		public var retriever:Array=new Array();
 		public var tweetr:Tweetr;
 		public var mutex:int=1;
 		
@@ -70,7 +70,7 @@
 
 		private function connect():void
 		{
-        	ghost.description="";
+        	//ghost.description="";
         	
         	// create a new tweetr instance
             tweetr = new Tweetr();
@@ -89,14 +89,14 @@
             tweetr.addEventListener(TweetEvent.FAILED, handleFail);
 		 
 		 	if (choix==1){
-				mainArr=[1];		 	
+				mainArr=null;		 	
             	// so let's retrieve the friends
             	tweetr.getFriends(txtUser.text, i);
             }
             else 
 			if (choix==0)
 			{
-				mainArr=[1];
+				mainArr=null;
             	// so let's retrieve the followers
             	tweetr.getFollowers(txtUser.text, j);
             }
@@ -147,11 +147,15 @@
        	private function handleLoad(event:TweetEvent):void
        	{
        		retriever=event.responseArray;
-       		mainArr = mainArr.concat(retriever);
+       		
+       		if (mainArr.length == 0) mainArr = retriever;
+       		else mainArr = mainArr.concat(retriever);
+       		
+       			
        		if (retriever.length!=100)
        		{
        			mainArr = mainArr.sort();
-       			initGraph(0,mainArr.length);
+       			initGraph(1,mainArr.length);
        		}
        		else{
        			if (choix==1){
@@ -227,7 +231,7 @@
 			//var lgt:int = mainArr.length;
 
 			
-			for(var i:int = begin; i < end+1; i++)
+			for(var i:int = begin; i < end; i++)
            	{
             	userData = mainArr[i];
                	//var obj:Object = {};
