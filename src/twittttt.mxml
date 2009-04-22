@@ -159,7 +159,7 @@
         
         
 
-		private function initGraph(begin:int, end:int):void
+		public function initGraph(begin:int, end:int):void
 		{
        		var stName:String = txtUser.text;
        		var lgt:int = end - begin + 1;
@@ -248,27 +248,27 @@
 			var reste:int= nbTotNoeud - (nbSsNoeud - 1)*20 -1;
 
 			
-			for(var i:int = 1; i < nbSsNoeud + 1; i++)
+			for(var i:int = 1; i < nbSsNoeud ; i++)
            	{
             	  
-               	noeud = 'id= "' + (i+1) + '" name ="20" desc="' + desc + '" nodeColor="0x'+ couleur.toString(16) +'" nodeSize="30" nodeClass="tree" nodeIcon="' + i + '" x="10" y="10"' 
+               	noeud = 'id= "' + (i+1) + '" name ="20" desc="' + ((i*20)-19) + '-' + (i*20) +'" nodeColor="0x'+ couleur.toString(16) +'" nodeSize="30" nodeClass="tree" nodeIcon="' + i + '" x="10" y="10"' 
                	graphe = graphe.appendChild(<Node{noeud}/>);
                
                	//couleur = couleur + 160000;  
            	}
                	
-            noeud = 'id= "' + (i+1) + '" name ="'  + reste + '" desc="' + desc + '" nodeColor="0x'+ couleur.toString(16) +'" nodeSize="30" nodeClass="tree" nodeIcon="' + i + '" x="10" y="10"' 
+            noeud = 'id= "' + (i+1) + '" name ="'  + reste + '" desc="' + ((i-1)*20+1) + '-' + (nbTotNoeud-1) + '" nodeColor="0x'+ couleur.toString(16) +'" nodeSize="30" nodeClass="tree" nodeIcon="' + i + '" x="10" y="10"' 
             graphe = graphe.appendChild(<Node{noeud}/>);
 
           
             for(var k:int = 1 ; k < nbSsNoeud + 2; k++)
-           {
-               userData = mainArr[k];
+           	{
+               //userData = mainArr[k];
              
                //Construction of the link between the friend and the user
-               edge = 'fromID="1" toID="' + (k+2) +'" edgeLabel="Good" flow="1000" edgeClass="rain" edgeIcon="Good"';
+               edge = 'fromID="1" toID="' + (k+1) +'" edgeLabel="Good" flow="1000" edgeClass="rain" edgeIcon="Good"';
                graphe = graphe.appendChild(<Edge{edge}/>);  
-          }
+          	}
           
           constGraph();
        	}

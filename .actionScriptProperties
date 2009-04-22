@@ -9,11 +9,9 @@
 <sourceAttachmentPath/>
 </compiler>
 <applications>
+<application path="twtwtw.mxml"/>
 <application path="twittttt.mxml"/>
 <application path="tweeter.mxml"/>
-<application path="twtwtw.mxml"/>
-<application path="RaVisExplorer.mxml"/>
-<application path="Pouet.mxml"/>
 </applications>
 <modules/>
 <buildCSSFiles/>

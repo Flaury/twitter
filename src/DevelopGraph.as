@@ -1,29 +1,3 @@
-/*
- * The MIT License
- *
- * Copyright (c) 2008
- * United Nations Office at Geneva
- * Center for Advanced Visual Analytics
- * http://cava.unog.ch
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- * 
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- * 
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- */
 package org.un.cava.birdeye.ravis.components.renderers.nodes {
 	
 	import flash.events.Event;
@@ -33,7 +7,6 @@ package org.un.cava.birdeye.ravis.components.renderers.nodes {
 	
 	import org.un.cava.birdeye.ravis.graphLayout.visual.IVisualNode;
 	import org.un.cava.birdeye.ravis.utils.events.VGraphEvent;
-	import org.un.cava.birdeye.ravis.utils.LogUtil;
 	
 	
 		
@@ -42,20 +15,21 @@ package org.un.cava.birdeye.ravis.components.renderers.nodes {
 	 * but renders a rectangle which is rotated according to the
 	 * angle of the corresponding visualNode
 	 * */
-	public class RotatedRectNodeRenderer extends EffectBaseNodeRenderer  {
+	public class DevelopGraph extends EffectBaseNodeRenderer  {
 		
 		private static const _LOG:String = "components.renderers.nodes.RotatedRectNodeRenderer";		
 		
 		private var _rc:UIComponent;
 		
 		public var boxWidth:Number = 20;
+
 		
 		/**
 		 * Default constructor
 		 * */
 		public function RotatedRectNodeRenderer() {
 			super();
-			this.addEventListener(VGraphEvent.VNODE_UPDATED,updateRotation);
+			this.addEventListener(VGraphEvent.VNODE_UPDATED,updateNode);
 		}
 	
 		/**
@@ -105,13 +79,27 @@ package org.un.cava.birdeye.ravis.components.renderers.nodes {
 		 * Event handler to turn the box if the orientation
 		 * in a node changes *
 		 * */
-		public function updateRotation(e:Event):void {
+		public function updateNode(e:Event):void {
+			
+			var bounds:Array=new Array();
+			
 			if(_rc != null) {
 				//LogUtil.info(_LOG, "updating rotation...");
 				if(this.data is IVisualNode) {
-					_rc.rotation = (this.data as IVisualNode).orientAngle;
+					bounds = retrieveBounds(_rc.id);		
+					initGraph(bounds[0],bounds[1]);
 				}
 			}
 		}
+		
+		
+		
+		public function retrieveBounds(id:String):Array{
+			return id.split('-');
+		}	
+		
+		
+		
+		
 	}
 }
